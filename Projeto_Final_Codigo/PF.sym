@@ -95,12 +95,12 @@ ROM Allocation:
 00003D  @cinit2
 
 Project Directory:
-    D:\Documentos\Faculdade\6o_Periodo\Microprocessadores_e_Microcontroladores\Projetos\C\Projeto Final\Jogo_Da_Velha_Com_PIC16F877A\Projeto_Final_Codigo\
+    D:\projetos_pic\Jogo_Da_Velha_Com_PIC16F877A\Projeto_Final_Codigo\
 
 Project Files:
-    PF.c                                                    [18-jun-24 13:47  CRC=06A88147]
-    PF.h                                                    [18-jun-24 13:48  CRC=B053860F]
-    C:\Program Files (x86)\PICC\Devices\16F877A.h           [15-jan-18 15:53  CRC=63418C39]
+    PF.c                                                    [18-jun-24 15:12  CRC=06A88147]
+    PF.h                                                    [18-jun-24 15:12  CRC=B053860F]
+    ..\..\..\Desenvolvimento IDE's\PIC Compiler -  CCS v.5.076\PICC\Devices\16F877A.h [15-jan-18 15:53  CRC=63418C39]
 
 Source signature=7D7F1FC8
 Program memory checksum=0000

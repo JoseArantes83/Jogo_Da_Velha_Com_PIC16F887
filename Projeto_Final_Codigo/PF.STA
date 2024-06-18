@@ -15,7 +15,7 @@ Lines Stmts  %   Files
 ----- ----- ---  -----
    22     5 100  PF.c
    44     0   0  PF.h
-  684     0   0  C:\Program Files (x86)\PICC\Devices\16F877A.h
+  684     0   0  ..\..\..\Desenvolvimento IDE's\PIC Compiler -  CCS v.5.076\PICC\Devices\16F877A.h
 ----- -----
   750     5 Total
 
