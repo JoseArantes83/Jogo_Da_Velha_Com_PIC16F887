@@ -1,0 +1,40 @@
+[PROJECT]
+Target=Projeto_Final.hex
+Processor_Text=PIC16F877A
+CCSVerions=5.076
+Compiler=PCM
+CCSVersion=5.076
+[Target Data]
+FileList=Projeto_Final.c
+[Directories]
+Include=
+[D:\Documentos\Faculdade\6o_Periodo\Microprocessadores_e_Microcontroladores\Projetos\C\Projeto Final\Projeto_Final_Codigo\Projeto_Final]
+Type=4
+[mru-list]
+1=Projeto_Final.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=1
+D1=18-06-2024
+D1_L=3
+D1_L1=[31155]Project Opened.
+D1_L2=[31446]Started Editing.
+D1_L3=[31747]Stopped Editing.
+
+[Opened Files]
+1=Projeto_Final.c
+t1=1
+2=Projeto_Final.h
+t2=1
+Count=2
+[Projeto_Final.c]
+Type=4
+[Units]
+Count=1
+1=Projeto_Final (main)
+
+[defines]
+buildcount=1
