@@ -13,11 +13,11 @@ Stack size: 8
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-   23     5 100  Projeto_Final.c
-   46     0   0  Projeto_Final.h
+   22     5 100  PF.c
+   44     0   0  PF.h
   684     0   0  C:\Program Files (x86)\PICC\Devices\16F877A.h
 ----- -----
-  753     5 Total
+  750     5 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------

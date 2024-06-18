@@ -1,0 +1,40 @@
+[PROJECT]
+Target=PF.hex
+Processor_Text=PIC16F877A
+CCSVerions=5.076
+Compiler=PCM
+CCSVersion=5.076
+[Target Data]
+FileList=PF.c
+[Directories]
+Include=
+[D:\Documentos\Faculdade\6o_Periodo\Microprocessadores_e_Microcontroladores\Projetos\C\Projeto Final\Jogo_Da_Velha_Com_PIC16F877A\Projeto_Final_Codigo\PF]
+Type=4
+[mru-list]
+1=PF.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=1
+D1=18-06-2024
+D1_L=3
+D1_L1=[49536]Project Opened.
+D1_L2=[49543]Started Editing.
+D1_L3=[49982]Stopped Editing.
+
+[Opened Files]
+1=PF.c
+t1=1
+2=PF.h
+t2=1
+Count=2
+[PF.c]
+Type=4
+
+[defines]
+buildcount=4
+[Units]
+Count=1
+1=PF (main)

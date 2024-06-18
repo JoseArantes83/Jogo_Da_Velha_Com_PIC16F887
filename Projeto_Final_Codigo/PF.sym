@@ -95,20 +95,20 @@ ROM Allocation:
 00003D  @cinit2
 
 Project Directory:
-    D:\Documentos\Faculdade\6o_Periodo\Microprocessadores_e_Microcontroladores\Projetos\C\Projeto Final\Projeto_Final_Codigo\
+    D:\Documentos\Faculdade\6o_Periodo\Microprocessadores_e_Microcontroladores\Projetos\C\Projeto Final\Jogo_Da_Velha_Com_PIC16F877A\Projeto_Final_Codigo\
 
 Project Files:
-    Projeto_Final.c                                         [18-jun-24 08:46  CRC=06A88147]
-    Projeto_Final.h                                         [18-jun-24 08:39  CRC=64C07028]
+    PF.c                                                    [18-jun-24 13:47  CRC=06A88147]
+    PF.h                                                    [18-jun-24 13:48  CRC=B053860F]
     C:\Program Files (x86)\PICC\Devices\16F877A.h           [15-jan-18 15:53  CRC=63418C39]
 
-Source signature=31EC09E1
+Source signature=7D7F1FC8
 Program memory checksum=0000
 Program memory CRC=0000
 Hex file CRC=D3F9
 
 Units:
-    Projeto_Final (main)
+    PF (main)
 
 Compiler Settings:
     Processor:      PIC16F877A
@@ -120,13 +120,13 @@ Compiler Settings:
     Compile Mode:       CCS5
 
 Output Files:
-    XREF file:   Projeto_Final.xsym
-    Errors:      Projeto_Final.err
-    Ext Symbols: Projeto_Final.esym
-    INHX8:       Projeto_Final.hex
-    Symbols:     Projeto_Final.sym
-    List:        Projeto_Final.lst
-    Debug/COFF:  Projeto_Final.cof
-    Project:     Projeto_Final.ccspjt
-    Call Tree:   Projeto_Final.tre
-    Statistics:  Projeto_Final.STA
+    XREF file:   PF.xsym
+    Errors:      PF.err
+    Ext Symbols: PF.esym
+    INHX8:       PF.hex
+    Symbols:     PF.sym
+    List:        PF.lst
+    Debug/COFF:  PF.cof
+    Project:     PF.ccspjt
+    Call Tree:   PF.tre
+    Statistics:  PF.STA
