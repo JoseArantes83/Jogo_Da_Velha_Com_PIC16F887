@@ -1,8 +1,8 @@
-CCS PCM C Compiler, Version 5.076, 56587               18-jun-24 15:52
+CCS PCM C Compiler, Version 5.076, 56587               19-jun-24 09:01
 
-               Filename:   D:\projetos_pic\Jogo_Da_Velha_Com_PIC16F877A\Projeto_Final_Codigo\PF.lst
+               Filename:   D:\Documentos\Faculdade\6o_Periodo\Microprocessadores_e_Microcontroladores\Projetos\C\Projeto Final\Jogo_Da_Velha_Com_PIC16F877A\Projeto_Final_Codigo\PF.lst
 
-               ROM used:   72 words (1%)
+               ROM used:   87 words (1%)
                            Largest free fragment is 2048
                RAM used:   12 (3%) at main() level
                            12 (3%) worst case
@@ -87,18 +87,20 @@ CCS PCM C Compiler, Version 5.076, 56587               18-jun-24 15:52
 .................... #use FIXED_IO( B_outputs=PIN_B7,PIN_B6,PIN_B5,PIN_B4,PIN_B3,PIN_B2,PIN_B1,PIN_B0 ) 
 .................... #use FIXED_IO( C_outputs=PIN_C7,PIN_C6,PIN_C5,PIN_C4,PIN_C3,PIN_C2,PIN_C1,PIN_C0 ) 
 .................... #use FIXED_IO( D_outputs=PIN_D7,PIN_D6,PIN_D5,PIN_D4,PIN_D3,PIN_D2,PIN_D1,PIN_D0 ) 
+.................... #use FIXED_IO( E_outputs=PIN_E0 ) 
 .................... #define B_SELECT   PIN_A0 
-.................... #define B_MOVE   PIN_A1 
+.................... #define B_MOVE    PIN_A1 
 .................... #define B_RESET   PIN_A2 
-.................... #define L1   PIN_A5 
-.................... #define L2   PIN_B0 
-.................... #define L3   PIN_B1 
-.................... #define L4   PIN_B2 
-.................... #define L5   PIN_B3 
-.................... #define L6   PIN_B4 
-.................... #define L7   PIN_B5 
-.................... #define L8   PIN_B6 
-.................... #define L9   PIN_B7 
+.................... #define RED1    PIN_A5 
+.................... #define RED2    PIN_B0 
+.................... #define RED3    PIN_B1 
+.................... #define GREEN1  PIN_B2 
+.................... #define GREEN2  PIN_B3 
+.................... #define GREEN3  PIN_B4 
+.................... #define LIN1    PIN_B5 
+.................... #define LIN2    PIN_B6 
+.................... #define LIN3    PIN_B7 
+.................... #define GND     PIN_E0 
 .................... #define A1   PIN_C0 
 .................... #define A2   PIN_C1 
 .................... #define A3   PIN_C2 
@@ -152,15 +154,37 @@ CCS PCM C Compiler, Version 5.076, 56587               18-jun-24 15:52
 ....................    enable_interrupts(GLOBAL); 
 0044:  MOVLW  C0
 0045:  IORWF  0B,F
-....................  
+....................     
+.................... //!   output_low(GND); 
+....................    output_low(GREEN1); 
+0046:  MOVLW  00
+0047:  BSF    03.5
+0048:  MOVWF  06
+0049:  BCF    03.5
+004A:  BCF    06.2
+....................    output_high(RED1); 
+004B:  MOVLW  DF
+004C:  BSF    03.5
+004D:  MOVWF  05
+004E:  BCF    03.5
+004F:  BSF    05.5
+....................    output_high(LIN1); 
+0050:  MOVLW  00
+0051:  BSF    03.5
+0052:  MOVWF  06
+0053:  BCF    03.5
+0054:  BSF    06.5
+....................     
+....................     
+....................     
 ....................    while(TRUE) 
 ....................    { 
-0046:  GOTO   046
+0055:  GOTO   055
 ....................  
 ....................    } 
 .................... } 
 ....................  
-0047:  SLEEP
+0056:  SLEEP
 
 Configuration Fuses:
    Word  1: 3F72   HS NOWDT PUT BROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT
