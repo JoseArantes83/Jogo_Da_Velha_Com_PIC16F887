@@ -16,7 +16,7 @@ void main()
 //!   output_low(GND);
    output_low(GREEN1);
    output_high(RED1);
-   output_high(LIN1);
+   output_low(LIN1);
    
    
    

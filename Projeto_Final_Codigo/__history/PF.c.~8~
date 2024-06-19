@@ -13,11 +13,10 @@ void main()
    enable_interrupts(INT_TIMER0);
    enable_interrupts(GLOBAL);
    
-//!   output_low(GND);
-   output_low(GREEN1);
+   output_low(GND);
    output_high(RED1);
-   output_high(LIN1);
-   
+   output_low(LIN1);
+   output_low(GREEN1);
    
    
    while(TRUE)

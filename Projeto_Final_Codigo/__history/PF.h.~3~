@@ -13,20 +13,18 @@
 #use FIXED_IO( B_outputs=PIN_B7,PIN_B6,PIN_B5,PIN_B4,PIN_B3,PIN_B2,PIN_B1,PIN_B0 )
 #use FIXED_IO( C_outputs=PIN_C7,PIN_C6,PIN_C5,PIN_C4,PIN_C3,PIN_C2,PIN_C1,PIN_C0 )
 #use FIXED_IO( D_outputs=PIN_D7,PIN_D6,PIN_D5,PIN_D4,PIN_D3,PIN_D2,PIN_D1,PIN_D0 )
-#use FIXED_IO( E_outputs=PIN_E0 )
 #define B_SELECT   PIN_A0
-#define B_MOVE    PIN_A1
+#define B_MOVE   PIN_A1
 #define B_RESET   PIN_A2
-#define RED1    PIN_A5
-#define RED2    PIN_B0
-#define RED3    PIN_B1
-#define GREEN1  PIN_B2
-#define GREEN2  PIN_B3
-#define GREEN3  PIN_B4
-#define LIN1    PIN_B5
-#define LIN2    PIN_B6
-#define LIN3    PIN_B7
-#define GND     PIN_E0
+#define L1   PIN_A5
+#define L2   PIN_B0
+#define L3   PIN_B1
+#define L4   PIN_B2
+#define L5   PIN_B3
+#define L6   PIN_B4
+#define L7   PIN_B5
+#define L8   PIN_B6
+#define L9   PIN_B7
 #define A1   PIN_C0
 #define A2   PIN_C1
 #define A3   PIN_C2
