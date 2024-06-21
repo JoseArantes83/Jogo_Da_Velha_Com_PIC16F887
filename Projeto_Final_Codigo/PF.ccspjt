@@ -17,7 +17,7 @@ Type=4
 forcecoff=0
 
 [ProjectLog]
-Days=2
+Days=3
 D1=18-06-2024
 D1_L=6
 D1_L1=[49536]Project Opened.
@@ -27,11 +27,17 @@ D1_L4=[51088]Started Editing.
 D1_L5=[57061]Project Opened.
 D1_L6=[57198]Started Editing.
 D2=19-06-2024
-D2_L=1
+D2_L=3
 D2_L1=[32851]Project Closed.
+D2_L2=[65698]Project Opened.
+D2_L3=[68727]Project Closed.
+D3=21-06-2024
+D3_L=2
+D3_L1=[40080]Project Opened.
+D3_L2=[40268]Project Closed.
 
 [Opened Files]
-1=PF.c
+1=..\..\pic_em_c\programa3 - Copia\controle_temperatura.c
 t1=1
 2=PF.h
 t2=1
