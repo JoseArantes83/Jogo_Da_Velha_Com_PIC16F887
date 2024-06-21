@@ -1,36 +1,30 @@
-#include <stdio.h>
+#include <PF.h>
 
-int verifica_ganhador(int matriz[3][3]);
+int8 i = 0, j = 0, ganhador = 0;
+int8 tabuleiro[3][3] = {
+  {-1, -1, -1},
+  {-1, -1, -1},
+  {-1, -1, -1}
+};
 
-int main()
-{
-    int i = 0, j = 0, ganhador = 0;
-    int tabuleiro[3][3] = {
-        {-1, -1, -1},
-        {-1, -1, -1},
-        {-1, -1, -1}
-    };
-    
-    for(i = 0; i < 3; i++){
-        
-        for(j = 0; j < 3; j++){
-            
-            printf("%d ",tabuleiro[i][j]);
-            
-        }
-        
-        printf("\n");
-        
-    }
-    
-    ganhador = verifica_ganhador(tabuleiro);
-    
-    printf("%d",ganhador);
-    
-    return 0;
+#INT_TIMER0
+void  TIMER0_isr(VOID) {
+
+   
+
 }
 
-int verifica_ganhador(int matriz[3][3]){
+void reinicia_tabuleiro(){
+
+   tabuleiro[3][3] = {
+     {-1, -1, -1},
+     {-1, -1, -1},
+     {-1, -1, -1}
+   };
+
+}
+
+int8 verifica_ganhador(int8 matriz[3][3]){
     
     int i = 0, j = 0;
     
@@ -53,3 +47,16 @@ int verifica_ganhador(int matriz[3][3]){
         return 0;
     
 }
+
+void main(){
+   setup_timer_0 (RTCC_INTERNAL|RTCC_DIV_8|RTCC_8_BIT); //1, 0 ms overflow
+   enable_interrupts (INT_TIMER0) ;
+   enable_interrupts (GLOBAL) ;
+
+   WHILE(TRUE){
+   
+      
+   
+   }
+}
+

@@ -32,21 +32,29 @@ D2_L1=[32851]Project Closed.
 D2_L2=[65698]Project Opened.
 D2_L3=[68727]Project Closed.
 D3=21-06-2024
-D3_L=2
+D3_L=6
 D3_L1=[40080]Project Opened.
 D3_L2=[40268]Project Closed.
+D3_L3=[53921]Project Opened.
+D3_L4=[53953]Started Editing.
+D3_L5=[54902]Stopped Editing.
+TotalEdit=11
+TotalDebug=0
+D3_E=11
+D3_D=0
+D3_L6=[55082]Project Closed.
 
 [Opened Files]
-1=..\..\pic_em_c\programa3 - Copia\controle_temperatura.c
-t1=1
+1=PF.c
+t1=45
 2=PF.h
-t2=1
-Count=1
+t2=21
+Count=2
 [PF.c]
 Type=4
 
 [defines]
-buildcount=5
+buildcount=7
 [Units]
 Count=1
 1=PF (main)
