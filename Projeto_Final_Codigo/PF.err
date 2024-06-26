@@ -1,0 +1,5 @@
+Compiling D:\projetos_pic\Jogo_Da_Velha_Com_PIC16F877A\Projeto_Final_Codigo\PF on 26-jun-24 at 10:24
+*** Error 111 "D:\projetos_pic\Jogo_Da_Velha_Com_PIC16F877A\Projeto_Final_Codigo\PF.h" Line 5(7,64): Unknown keyword in #FUSES   "NOMCLR"
+*** Error 111 "D:\projetos_pic\Jogo_Da_Velha_Com_PIC16F877A\Projeto_Final_Codigo\PF.h" Line 9(7,77): Unknown keyword in #FUSES   "IESO"
+*** Error 111 "D:\projetos_pic\Jogo_Da_Velha_Com_PIC16F877A\Projeto_Final_Codigo\PF.h" Line 10(7,66): Unknown keyword in #FUSES   "FCMEN"
+*** Error 111 "D:\projetos_pic\Jogo_Da_Velha_Com_PIC16F877A\Projeto_Final_Codigo\PF.h" Line 12(7,57): Unknown keyword in #FUSES   "BORV40"

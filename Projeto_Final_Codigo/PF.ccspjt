@@ -17,7 +17,7 @@ Type=4
 forcecoff=0
 
 [ProjectLog]
-Days=3
+Days=4
 D1=18-06-2024
 D1_L=6
 D1_L1=[49536]Project Opened.
@@ -43,12 +43,20 @@ TotalDebug=0
 D3_E=11
 D3_D=0
 D3_L6=[55082]Project Closed.
+D4=26-06-2024
+D4_L=6
+D4_L1=[37226]Project Opened.
+D4_L2=[37238]Project Closed.
+D4_L3=[37299]Project Opened.
+D4_L4=[37303]Project Closed.
+D4_L5=[37322]Project Opened.
+D4_L6=[37388]Started Editing.
 
 [Opened Files]
 1=PF.c
-t1=45
+t1=1
 2=PF.h
-t2=21
+t2=1
 Count=2
 [PF.c]
 Type=4
