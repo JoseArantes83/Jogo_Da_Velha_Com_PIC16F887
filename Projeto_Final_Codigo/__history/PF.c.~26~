@@ -1,5 +1,7 @@
 #include <PF.h>
 
+int1 fim50ms = 0;
+int8 cont50ms = 0;
 int8 i = 0, j = 0, tabuleirox = 0, tabuleiroy = 0;
 int8 pontuacaoJ1 = 0, pontuacaoJ2 = 0, ganhador = 0;
 int8 tabuleiro[3][3];
@@ -19,6 +21,15 @@ void  TIMER0_isr(VOID) {
          tabuleirox = 0;
       
       }
+   
+   }
+   
+   cont50ms += 1;
+   
+   if(cont50ms == 50){
+   
+      cont50ms = 0;
+      fim50ms = 1;
    
    }
 
@@ -173,6 +184,17 @@ void acende_tabuleiro(int8 x, y){
       }
    
    }
+   
+   else{
+   
+      output_low(RED1);
+      output_low(RED2);
+      output_low(RED3);
+      output_low(GREEN1);
+      output_low(GREEN2);
+      output_low(GREEN3);
+   
+   }
 
 }
 
@@ -204,10 +226,20 @@ void main(){
    enable_interrupts (GLOBAL) ;
    
    reinicia_tabuleiro();
+   
+   tabuleiro[0][0] = 1;
+   tabuleiro[0][1] = 2;
+   tabuleiro[0][2] = 0;
 
    WHILE(TRUE){
    
-//!      for(i
+      if(fim50ms){
+      
+         acende_tabuleiro(tabuleirox, tabuleiroy);
+         
+         fim50ms = 0;
+      
+      }
    
    }
 }

@@ -1,5 +1,7 @@
 #include <PF.h>
 
+int1 fimtempo = 0;
+int16 tempo = 0;
 int8 i = 0, j = 0, tabuleirox = 0, tabuleiroy = 0;
 int8 pontuacaoJ1 = 0, pontuacaoJ2 = 0, ganhador = 0;
 int8 tabuleiro[3][3];
@@ -7,18 +9,12 @@ int8 tabuleiro[3][3];
 #INT_TIMER0
 void  TIMER0_isr(VOID) {
 
-   tabuleiroy += 1;
+   tempo += 1;
    
-   if(tabuleiroy == 3){
+   if(tempo == 500){
    
-      tabuleirox += 1;
-      tabuleiroy = 0;
-      
-      if(tabuleirox == 3){
-      
-         tabuleirox = 0;
-      
-      }
+      tempo = 0;
+      fimtempo = 1;
    
    }
 
@@ -42,7 +38,7 @@ void acende_tabuleiro(int8 x, y){
 
 //! SE EU DER OUTPUT LOW EM TODOS OS PINOS ANTES DE VIR AQUI PRA ACENDER, EU SÓ VOU PRECISAR ACENDER OS ESPECIFICOS DE CADA IF
 
-   if(x == 1){
+   if(x == 0){
       
       output_low(LIN1);
       output_high(LIN2);
@@ -50,7 +46,7 @@ void acende_tabuleiro(int8 x, y){
       
    }
    
-   else if(x == 2){
+   else if(x == 1){
    
       output_high(LIN1);
       output_low(LIN2);
@@ -173,6 +169,17 @@ void acende_tabuleiro(int8 x, y){
       }
    
    }
+   
+   else{
+   
+      output_low(RED1);
+      output_low(RED2);
+      output_low(RED3);
+      output_low(GREEN1);
+      output_low(GREEN2);
+      output_low(GREEN3);
+   
+   }
 
 }
 
@@ -204,10 +211,35 @@ void main(){
    enable_interrupts (GLOBAL) ;
    
    reinicia_tabuleiro();
+   
+   tabuleiro[0][0] = 1;
+   tabuleiro[0][1] = 2;
+   tabuleiro[0][2] = 0;
 
    WHILE(TRUE){
    
-//!      for(i
+      if(fimtempo){
+      
+         acende_tabuleiro(tabuleirox, tabuleiroy);
+         
+         tabuleiroy += 1;
+   
+         if(tabuleiroy == 3){
+         
+            tabuleirox += 1;
+            tabuleiroy = 0;
+            
+            if(tabuleirox == 3){
+            
+               tabuleirox = 0;
+            
+            }
+         
+         }
+         
+         fimtempo = 0;
+      
+      }
    
    }
 }

@@ -17,7 +17,11 @@ Type=4
 forcecoff=0
 
 [ProjectLog]
-Days=4
+<<<<<<< Updated upstream
+Days=2
+============================
+Days=5
+>>>>>>> Stashed changes
 D1=18-06-2024
 D1_L=6
 D1_L1=[49536]Project Opened.
@@ -26,45 +30,72 @@ D1_L3=[49982]Stopped Editing.
 D1_L4=[51088]Started Editing.
 D1_L5=[57061]Project Opened.
 D1_L6=[57198]Started Editing.
-D2=19-06-2024
-D2_L=3
-D2_L1=[32851]Project Closed.
-D2_L2=[65698]Project Opened.
-D2_L3=[68727]Project Closed.
-D3=21-06-2024
-D3_L=6
-D3_L1=[40080]Project Opened.
-D3_L2=[40268]Project Closed.
-D3_L3=[53921]Project Opened.
-D3_L4=[53953]Started Editing.
-D3_L5=[54902]Stopped Editing.
-TotalEdit=11
+<<<<<<< Updated upstream
+============================
+D2=26-06-2024
+D2_L=20
+D2_L1=[26931]Project Opened.
+D2_L2=[26935]Project Closed.
+D2_L3=[26946]Project Opened.
+D2_L4=[27066]Started Editing.
+D2_L5=[27397]Stopped Editing.
+D2_L6=[28090]Started Editing.
+D2_L7=[28399]Stopped Editing.
+D2_L8=[28716]Started Editing.
+D2_L9=[29498]Stopped Editing.
+D2_L10=[30971]Started Editing.
+D2_L11=[31271]Stopped Editing.
+D2_L12=[31276]Started Editing.
+D2_L13=[31578]Stopped Editing.
+D2_L14=[32478]Started Editing.
+D2_L15=[32782]Stopped Editing.
+D2_L16=[39842]Started Editing.
+D2_L17=[40143]Stopped Editing.
+TotalEdit=9
 TotalDebug=0
-D3_E=11
-D3_D=0
-D3_L6=[55082]Project Closed.
-D4=26-06-2024
-D4_L=8
-D4_L1=[37226]Project Opened.
-D4_L2=[37238]Project Closed.
-D4_L3=[37299]Project Opened.
-D4_L4=[37303]Project Closed.
-D4_L5=[37322]Project Opened.
-D4_L6=[37388]Started Editing.
-D4_L7=[37757]Stopped Editing.
-D4_L8=[37949]Started Editing.
+D2_E=9
+D2_D=0
+D2_L18=[60513]Project Closed.
+D3=20-06-2024
+D3_L=1
+D3_L1=[72292]Project Opened.
+D4=21-06-2024
+D4_L=1
+D4_L1=[26873]Project Closed.
+D5=26-06-2024
+D5_L=8
+D5_L1=[34550]Project Opened.
+D5_L2=[34564]Project Closed.
+D5_L3=[34607]Project Opened.
+D5_L4=[35437]Started Editing.
+D5_L5=[36331]Project Opened.
+D5_L6=[37074]Started Editing.
+D5_L7=[39675]Stopped Editing.
+D5_L8=[39736]Started Editing.
+>>>>>>> Stashed changes
+D2_L19=[40951]Stopped Editing.
+D2_L20=[41152]Started Editing.
 
 [Opened Files]
 1=PF.c
 t1=1
 2=PF.h
-t2=1
+<<<<<<< Updated upstream
+t2=17
 Count=2
+=======
+t2=13
+Count=2
+>>>>>>> Stashed changes
 [PF.c]
 Type=4
 
 [defines]
-buildcount=9
+<<<<<<< Updated upstream
+buildcount=45
+=======
+buildcount=39
+>>>>>>> Stashed changes
 [Units]
 Count=1
 1=PF (main)

@@ -1,13 +1,20 @@
 #include <PF.h>
 
-int8 i = 0, j = 0;
+int8 i = 0, j = 0, tabuleirox = 0, tabuleiroy = 0;
 int8 pontuacaoJ1 = 0, pontuacaoJ2 = 0, ganhador = 0;
 int8 tabuleiro[3][3];
 
 #INT_TIMER0
 void  TIMER0_isr(VOID) {
 
+   tabuleiroy += 1;
    
+   if(tabuleiroy == 4){
+   
+      tabuleirox += 1;
+      tabuleiroy = 0;
+   
+   }
 
 }
 
@@ -25,9 +32,41 @@ void reinicia_tabuleiro(){
 
 }
 
+void acende_tabuleiro(int8 x, y){
+
+   if(x == 1){
+      
+      output_low(LIN1);
+      output_high(LIN2);
+      output_high(LIN3);
+      
+   }
+   
+   else if(x == 2){
+   
+      output_high(LIN1);
+      output_low(LIN2);
+      output_high(LIN3);
+   
+   }
+   
+   else{
+   
+      output_high(LIN1);
+      output_high(LIN2);
+      output_low(LIN3);
+   
+   }
+
+   if(tabuleiro[x][y] == 1){
+   
+      
+   
+   }
+
+}
+
 int8 verifica_ganhador(int8 matriz[3][3]){
-    
-    int i = 0, j = 0;
     
     for(i = 0; i < 3; i++){
         
@@ -58,8 +97,7 @@ void main(){
 
    WHILE(TRUE){
    
-      
+//!      for(i
    
    }
 }
-

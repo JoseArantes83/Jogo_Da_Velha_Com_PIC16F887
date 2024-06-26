@@ -1,6 +1,10 @@
 ÀÄPF
-   ÃÄMAIN  0/37  Ram=0
+   ÃÄMAIN  0/74  Ram=0
    ³  ÃÄ@cinit1  (Inline)  Ram=0
-   ³  ÀÄreinicia_tabuleiro  0/64  Ram=2
-   ³     ÀÄ@MUL88  (Inline)  Ram=2
-   ÀÄTIMER0_isr  0/4  Ram=0
+   ³  ÃÄreinicia_tabuleiro  0/29  Ram=2
+   ³  ³  ÀÄ@MUL88  0/37  Ram=2
+   ³  ÀÄacende_tabuleiro  0/184  Ram=1
+   ³     ÃÄ@MUL88  0/37  Ram=2
+   ³     ÃÄ@MUL88  0/37  Ram=2
+   ³     ÀÄ@MUL88  0/37  Ram=2
+   ÀÄTIMER0_isr  0/18  Ram=0

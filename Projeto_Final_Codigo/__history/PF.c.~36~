@@ -1,24 +1,20 @@
 #include <PF.h>
 
-int8 i = 0, j = 0, tabuleirox = 0, tabuleiroy = 0;
+int1 fimtempo = 0;
+int16 tempo = 0;
+int8 i = 0, j = 0, x = 0, y = 0;
 int8 pontuacaoJ1 = 0, pontuacaoJ2 = 0, ganhador = 0;
 int8 tabuleiro[3][3];
 
 #INT_TIMER0
 void  TIMER0_isr(VOID) {
 
-   tabuleiroy += 1;
+   tempo += 1;
    
-   if(tabuleiroy == 3){
+   if(tempo == 500){
    
-      tabuleirox += 1;
-      tabuleiroy = 0;
-      
-      if(tabuleirox == 3){
-      
-         tabuleirox = 0;
-      
-      }
+      tempo = 0;
+      fimtempo = 1;
    
    }
 
@@ -38,60 +34,52 @@ void reinicia_tabuleiro(){
 
 }
 
-void acende_tabuleiro(int8 x, y){
+void acende_tabuleiro(){
 
-//! SE EU DER OUTPUT LOW EM TODOS OS PINOS ANTES DE VIR AQUI PRA ACENDER, EU SÓ VOU PRECISAR ACENDER OS ESPECIFICOS DE CADA IF
+   output_high(LIN1);
+   output_high(LIN2);
+   output_high(LIN3);
+   output_low(RED1);
+   output_low(RED2);
+   output_low(RED3);
+   output_low(GREEN1);
+   output_low(GREEN2);
+   output_low(GREEN3);
 
-   if(x == 1){
+   if(x == 0){
       
       output_low(LIN1);
-      output_high(LIN2);
-      output_high(LIN3);
       
    }
    
-   else if(x == 2){
+   else if(x == 1){
    
       output_high(LIN1);
-      output_low(LIN2);
-      output_high(LIN3);
    
    }
    
    else{
    
       output_high(LIN1);
-      output_high(LIN2);
-      output_low(LIN3);
    
    }
 
    if(tabuleiro[x][y] == 1){
    
-      output_low(GREEN1);
-      output_low(GREEN2);
-      output_low(GREEN3);
-   
       if(y == 0){
       
          output_high(RED1);
-         output_low(RED2);
-         output_low(RED3);
       
       }
       
       else if(y == 1){
       
-         output_low(RED1);
          output_high(RED2);
-         output_low(RED3);
       
       }
       
       else{
       
-         output_low(RED1);
-         output_low(RED2);
          output_high(RED3);
       
       }
@@ -100,30 +88,20 @@ void acende_tabuleiro(int8 x, y){
    
    else if(tabuleiro[x][y] == 2){
    
-      output_low(RED1);
-      output_low(RED2);
-      output_low(RED3);
-   
       if(y == 0){
       
          output_high(GREEN1);
-         output_low(GREEN2);
-         output_low(GREEN3);
       
       }
       
       else if(y == 1){
       
-         output_low(GREEN1);
          output_high(GREEN2);
-         output_low(GREEN3);
       
       }
       
       else{
       
-         output_low(GREEN1);
-         output_low(GREEN2);
          output_high(GREEN3);
       
       }
@@ -131,43 +109,24 @@ void acende_tabuleiro(int8 x, y){
    }
    
    else if(tabuleiro[x][y] == 0){
-   
-      output_low(RED1);
-      output_low(RED2);
-      output_low(RED3);
-      output_low(GREEN1);
-      output_low(GREEN2);
-      output_low(GREEN3);
       
       if(y == 0){
       
          output_high(RED1);
-         output_low(RED2);
-         output_low(RED3);
          output_high(GREEN1);
-         output_low(GREEN2);
-         output_low(GREEN3);
       
       }
       
       else if(y == 1){
       
-         output_low(RED1);
          output_high(RED2);
-         output_low(RED3);
-         output_low(GREEN1);
          output_high(GREEN2);
-         output_low(GREEN3);
       
       }
       
       else{
          
-         output_low(RED1);
-         output_low(RED2);
          output_high(RED3);
-         output_low(GREEN1);
-         output_low(GREEN2);
          output_high(GREEN3);
       
       }
@@ -204,10 +163,41 @@ void main(){
    enable_interrupts (GLOBAL) ;
    
    reinicia_tabuleiro();
+   
+   tabuleiro[0][0] = 1;
+   tabuleiro[0][1] = 2;
+   tabuleiro[0][2] = 0;
+   tabuleiro[1][0] = 1;
+   tabuleiro[1][1] = 2;
+   tabuleiro[1][2] = 0;
+   tabuleiro[2][0] = 1;
+   tabuleiro[2][1] = 2;
+   tabuleiro[2][2] = 0;
 
    WHILE(TRUE){
    
-//!      for(i
+      if(fimtempo){
+      
+         acende_tabuleiro();
+         
+         y += 1;
+   
+         if(y == 3){
+         
+            x += 1;
+            y = 0;
+            
+            if(x == 3){
+            
+               x = 0;
+            
+            }
+         
+         }
+         
+         fimtempo = 0;
+      
+      }
    
    }
 }
