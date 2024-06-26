@@ -1,6 +1,5 @@
 004-005 @READ_PROGRAM_MEMORY8.P1
 004-005 @WRITE_PROGRAM_MEMORY8.P2
-008     PSP_DATA
 015     CCP_1
 015     CCP_1_LOW
 016     CCP_1_HIGH
@@ -30,9 +29,9 @@
 079     @SCRATCH
 07A     @SCRATCH
 07F     @INTERRUPT_AREA
-09C.6   C1OUT
-09C.7   C2OUT
 0FF     @INTERRUPT_AREA
+107.6   C1OUT
+108.6   C2OUT
 10D-10E @WRITE_PROGRAM_MEMORY8.P1
 10D-10E @READ_PROGRAM_MEMORY8.P2
 17F     @INTERRUPT_AREA
@@ -104,26 +103,26 @@ ROM Allocation:
 000041  @MUL88
 000073  MAIN
 000073  @cinit1
-000082  @cinit2
+00008A  @cinit2
 
 Project Directory:
     D:\projetos_pic\Jogo_Da_Velha_Com_PIC16F877A\Projeto_Final_Codigo\
 
 Project Files:
-    PF.c                                                    [21-jun-24 15:12  CRC=4C61E9E0]
-    PF.h                                                    [19-jun-24 18:14  CRC=936596F4]
-    ..\..\..\Desenvolvimento IDE's\PIC Compiler -  CCS v.5.076\PICC\Devices\16F877A.h [15-jan-18 15:53  CRC=63418C39]
+    PF.c                                                    [26-jun-24 10:24  CRC=554D487D]
+    PF.h                                                    [26-jun-24 10:32  CRC=5E7D27E4]
+    ..\..\..\Desenvolvimento IDE's\PIC Compiler -  CCS v.5.076\PICC\Devices\16F887.h [21-jun-24 11:21  CRC=59C59B21]
 
-Source signature=A64A9946
+Source signature=6755A6A3
 Program memory checksum=0000
 Program memory CRC=0000
-Hex file CRC=846A
+Hex file CRC=3FDA
 
 Units:
     PF (main)
 
 Compiler Settings:
-    Processor:      PIC16F877A
+    Processor:      PIC16F887
     Pointer Size:   16
     ADC Range:      0-1023
     Opt Level:      9

@@ -1,6 +1,6 @@
 [PROJECT]
 Target=PF.hex
-Processor_Text=PIC16F877A
+Processor_Text=PIC16F887
 CCSVerions=5.076
 Compiler=PCM
 CCSVersion=5.076
@@ -44,13 +44,15 @@ D3_E=11
 D3_D=0
 D3_L6=[55082]Project Closed.
 D4=26-06-2024
-D4_L=6
+D4_L=8
 D4_L1=[37226]Project Opened.
 D4_L2=[37238]Project Closed.
 D4_L3=[37299]Project Opened.
 D4_L4=[37303]Project Closed.
 D4_L5=[37322]Project Opened.
 D4_L6=[37388]Started Editing.
+D4_L7=[37757]Stopped Editing.
+D4_L8=[37949]Started Editing.
 
 [Opened Files]
 1=PF.c
@@ -62,7 +64,7 @@ Count=2
 Type=4
 
 [defines]
-buildcount=7
+buildcount=9
 [Units]
 Count=1
 1=PF (main)

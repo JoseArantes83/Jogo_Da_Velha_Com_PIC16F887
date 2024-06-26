@@ -1,8 +1,8 @@
-CCS PCM C Compiler, Version 5.076, 56587               21-jun-24 15:12
+CCS PCM C Compiler, Version 5.076, 56587               26-jun-24 10:33
 
                Filename:   D:\projetos_pic\Jogo_Da_Velha_Com_PIC16F877A\Projeto_Final_Codigo\PF.lst
 
-               ROM used:   142 words (2%)
+               ROM used:   152 words (2%)
                            Largest free fragment is 2048
                RAM used:   26 (7%) at main() level
                            28 (8%) worst case
@@ -58,8 +58,8 @@ CCS PCM C Compiler, Version 5.076, 56587               21-jun-24 15:12
 002D:  BCF    0A.4
 002E:  GOTO   02F
 .................... #include <PF.h> 
-.................... #include <16F877A.h> 
-.................... //////////// Standard Header file for the PIC16F877A device //////////////// 
+.................... #include <16F887.h> 
+.................... //////////// Standard Header file for the PIC16F887 device //////////////// 
 .................... /////////////////////////////////////////////////////////////////////////// 
 .................... ////        (C) Copyright 1996, 2014 Custom Computer Services          //// 
 .................... //// This source code may only be used by licensed users of the CCS C  //// 
@@ -69,7 +69,7 @@ CCS PCM C Compiler, Version 5.076, 56587               21-jun-24 15:12
 .................... //// Derivative programs created using this software in object code    //// 
 .................... //// form are not restricted in any way.                               //// 
 .................... /////////////////////////////////////////////////////////////////////////// 
-.................... #device PIC16F877A 
+.................... #device PIC16F887 
 *
 0041:  CLRF   77
 0042:  CLRF   78
@@ -110,50 +110,54 @@ CCS PCM C Compiler, Version 5.076, 56587               21-jun-24 15:12
 ....................  
 .................... #list 
 ....................  
-.................... #device ADC=10 
+.................... #device ADC = 10 
 ....................  
-.................... #FUSES PUT                      //Power Up Timer 
-.................... #FUSES BROWNOUT                 //Reset when brownout detected 
-.................... #FUSES NOLVP                    //No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O 
-.................... #FUSES NOCPD                    //No EE protection 
-.................... #FUSES NOWRT                    //Program memory not write protected 
-.................... #FUSES NOPROTECT                //Code not protected from reading 
+.................... #FUSES PUT        // Power Up Timer 
+.................... #FUSES NOMCLR     // Master Clear pin used for I/O 
+.................... #FUSES NOPROTECT  // Code not protected from reading 
+.................... #FUSES NOCPD      // No EE protection 
+.................... #FUSES NOBROWNOUT // No brownout reset 
+.................... #FUSES IESO       // Internal External Switch Over mode enabled 
+.................... #FUSES FCMEN      // Fail-safe clock monitor enabled 
+.................... #FUSES NOLVP      // No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O 
+.................... #FUSES BORV40     // Brownout reset at 4.0V 
+.................... #FUSES NOWRT      // Program memory not write protected 
 ....................  
-.................... #use delay(crystal=8MHz) 
-.................... #use FIXED_IO( A_outputs=PIN_A5 ) 
-.................... #use FIXED_IO( B_outputs=PIN_B7,PIN_B6,PIN_B5,PIN_B4,PIN_B3,PIN_B2,PIN_B1,PIN_B0 ) 
-.................... #use FIXED_IO( C_outputs=PIN_C7,PIN_C6,PIN_C5,PIN_C4,PIN_C3,PIN_C2,PIN_C1,PIN_C0 ) 
-.................... #use FIXED_IO( D_outputs=PIN_D7,PIN_D6,PIN_D5,PIN_D4,PIN_D3,PIN_D2,PIN_D1,PIN_D0 ) 
-.................... #use FIXED_IO( E_outputs=PIN_E0 ) 
-.................... #define B_SELECT   PIN_A0 
-.................... #define B_MOVE    PIN_A1 
-.................... #define B_RESET   PIN_A2 
-.................... #define RED1    PIN_A5 
-.................... #define RED2    PIN_B0 
-.................... #define RED3    PIN_B1 
-.................... #define GREEN1  PIN_B2 
-.................... #define GREEN2  PIN_B3 
-.................... #define GREEN3  PIN_B4 
-.................... #define LIN1    PIN_B5 
-.................... #define LIN2    PIN_B6 
-.................... #define LIN3    PIN_B7 
-.................... #define GND     PIN_E0 
-.................... #define A1   PIN_C0 
-.................... #define A2   PIN_C1 
-.................... #define A3   PIN_C2 
-.................... #define A4   PIN_C3 
-.................... #define A5   PIN_C4 
-.................... #define A6   PIN_C5 
-.................... #define A7   PIN_C6 
-.................... #define A8   PIN_C7 
-.................... #define B1   PIN_D0 
-.................... #define B2   PIN_D1 
-.................... #define B3   PIN_D2 
-.................... #define B4   PIN_D3 
-.................... #define B5   PIN_D4 
-.................... #define B6   PIN_D5 
-.................... #define B7   PIN_D6 
-.................... #define B8   PIN_D7 
+.................... #use delay(crystal = 8MHz) 
+.................... #use FIXED_IO(A_outputs = PIN_A5) 
+.................... #use FIXED_IO(B_outputs = PIN_B7, PIN_B6, PIN_B5, PIN_B4, PIN_B3, PIN_B2, PIN_B1, PIN_B0) 
+.................... #use FIXED_IO(C_outputs = PIN_C7, PIN_C6, PIN_C5, PIN_C4, PIN_C3, PIN_C2, PIN_C1, PIN_C0) 
+.................... #use FIXED_IO(D_outputs = PIN_D7, PIN_D6, PIN_D5, PIN_D4, PIN_D3, PIN_D2, PIN_D1, PIN_D0) 
+.................... #use FIXED_IO(E_outputs = PIN_E0) 
+.................... #define B_SELECT PIN_A0 
+.................... #define B_MOVE PIN_A1 
+.................... #define B_RESET PIN_A2 
+.................... #define RED1 PIN_A5 
+.................... #define RED2 PIN_B0 
+.................... #define RED3 PIN_B1 
+.................... #define GREEN1 PIN_B2 
+.................... #define GREEN2 PIN_B3 
+.................... #define GREEN3 PIN_B4 
+.................... #define LIN1 PIN_B5 
+.................... #define LIN2 PIN_B6 
+.................... #define LIN3 PIN_B7 
+.................... #define GND PIN_E0 
+.................... #define A1 PIN_C0 
+.................... #define A2 PIN_C1 
+.................... #define A3 PIN_C2 
+.................... #define A4 PIN_C3 
+.................... #define A5 PIN_C4 
+.................... #define A6 PIN_C5 
+.................... #define A7 PIN_C6 
+.................... #define A8 PIN_C7 
+.................... #define B1 PIN_D0 
+.................... #define B2 PIN_D1 
+.................... #define B3 PIN_D2 
+.................... #define B4 PIN_D3 
+.................... #define B5 PIN_D4 
+.................... #define B6 PIN_D5 
+.................... #define B7 PIN_D6 
+.................... #define B8 PIN_D7 
 ....................  
 ....................  
 .................... int8 i = 0, j = 0; 
@@ -161,7 +165,7 @@ CCS PCM C Compiler, Version 5.076, 56587               21-jun-24 15:12
 .................... int8 tabuleiro[3][3]; 
 ....................  
 .................... #INT_TIMER0 
-.................... void  TIMER0_isr(VOID) { 
+.................... void  TIMER0_isr(void) { 
 ....................  
 ....................     
 ....................  
@@ -211,7 +215,7 @@ CCS PCM C Compiler, Version 5.076, 56587               21-jun-24 15:12
 ....................    } 
 0070:  BCF    0A.3
 0071:  BCF    0A.4
-0072:  GOTO   08C (RETURN)
+0072:  GOTO   096 (RETURN)
 ....................  
 .................... } 
 ....................  
@@ -249,37 +253,49 @@ CCS PCM C Compiler, Version 5.076, 56587               21-jun-24 15:12
 0079:  CLRF   2A
 007A:  CLRF   2B
 007B:  BSF    03.5
-007C:  BSF    1F.0
-007D:  BSF    1F.1
-007E:  BSF    1F.2
-007F:  BCF    1F.3
-0080:  MOVLW  07
-0081:  MOVWF  1C
-0082:  BCF    03.7
-....................    setup_timer_0 (RTCC_INTERNAL|RTCC_DIV_8|RTCC_8_BIT); //1, 0 ms overflow 
-0083:  MOVF   01,W
-0084:  ANDLW  C0
-0085:  IORLW  02
-0086:  MOVWF  01
-....................    enable_interrupts (INT_TIMER0) ; 
-0087:  BCF    03.5
-0088:  BSF    0B.5
-....................    enable_interrupts (GLOBAL) ; 
-0089:  MOVLW  C0
-008A:  IORWF  0B,F
+007C:  BSF    03.6
+007D:  MOVF   09,W
+007E:  ANDLW  C0
+007F:  MOVWF  09
+0080:  BCF    03.6
+0081:  BCF    1F.4
+0082:  BCF    1F.5
+0083:  MOVLW  00
+0084:  BSF    03.6
+0085:  MOVWF  08
+0086:  BCF    03.5
+0087:  CLRF   07
+0088:  CLRF   08
+0089:  CLRF   09
+008A:  BCF    03.7
+....................    setup_timer_0(RTCC_INTERNAL|RTCC_DIV_8|RTCC_8_BIT);      //1,0 ms overflow 
+008B:  BSF    03.5
+008C:  BCF    03.6
+008D:  MOVF   01,W
+008E:  ANDLW  C0
+008F:  IORLW  02
+0090:  MOVWF  01
+....................  
+....................    enable_interrupts(INT_TIMER0); 
+0091:  BCF    03.5
+0092:  BSF    0B.5
+....................    enable_interrupts(GLOBAL); 
+0093:  MOVLW  C0
+0094:  IORWF  0B,F
 ....................     
 ....................    reinicia_tabuleiro(); 
-008B:  GOTO   033
+0095:  GOTO   033
 ....................  
 ....................    WHILE(TRUE){ 
-008C:  GOTO   08C
+0096:  GOTO   096
 ....................     
 ....................        
 ....................     
 ....................    } 
 .................... } 
 ....................  
-008D:  SLEEP
+0097:  SLEEP
 
 Configuration Fuses:
-   Word  1: 3F72   HS NOWDT PUT BROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT
+   Word  1: 2CC2   HS NOWDT PUT NOMCLR NOPROTECT NOCPD NOBROWNOUT IESO FCMEN NOLVP NODEBUG
+   Word  2: 3FFF   BORV40 NOWRT
