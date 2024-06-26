@@ -1,50 +1,49 @@
 
-ROM used:   389/8192 (5%)
-            389/8192 (5%) including unused fragments
+ROM used:   152/8192 (2%)
+            152/8192 (2%) including unused fragments
 
-            0.4 Average locations per line
-            4.0 Average locations per statement
+            0.2 Average locations per line
+            6.9 Average locations per statement
 
-RAM used:   31/368 (8%) at main() level
-            33/368 (9%) worst case
+RAM used:   26/368 (7%) at main() level
+            28/368 (8%) worst case
 
 Stack used: 1 worst case (0 in main + 1 for interrupts)
 Stack size: 8
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  204    98 100  PF.c
+   65    22 100  PF.c
    50     0   0  PF.h
   786     0   0  C:\Program Files (x86)\PICC\Devices\16F887.h
 ----- -----
- 1040    98 Total
+  901    22 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------
-0     18   5    0     88  2.9  TIMER0_isr
-0     29   7    2    172  3.9  reinicia_tabuleiro
-0     37  10    2             @MUL88
-0    184  47    1   1218  3.4  acende_tabuleiro
-0     74  19    0    844  4.8  MAIN
- Inline         0             @cinit1
+0      4   3    0      5  1.0  TIMER0_isr
+0     64  42    2    172  3.9  reinicia_tabuleiro
+ Inline         2             @MUL88
+0     37  24    0    102  2.1  MAIN
+ Inline         0    844  4.8  @cinit1
 
 Program metrics:
     Functions               4
-    Statements              98
+    Statements              22
     Comments                136
-    Volume (V)              2946
-    Difficulty (D)          15.5
-    Effort to implement (E) 45770
-    Time to implement (T)   42 minutes
+    Volume (V)              1388
+    Difficulty (D)          12.0
+    Effort to implement (E) 16704
+    Time to implement (T)   15 minutes
     Est Delivered Bugs (B)  0
-    Cyclomatic Complexity   17
-    Maintainability (MI)    103
+    Cyclomatic Complexity   5
+    Maintainability (MI)    132
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00003     4  0  
 00004-0002E    43  0  
-0002F-007FF   342  1659  
+0002F-007FF   105  1896  
 00800-00FFF     0  2048  
 01000-017FF     0  2048  
 01800-01FFF     0  2048  
