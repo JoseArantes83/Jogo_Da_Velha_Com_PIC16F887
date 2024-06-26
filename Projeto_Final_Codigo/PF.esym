@@ -1,9 +1,10 @@
-D G "__PCM__" 0 205 ""5.076""
-D G "__DEVICE__" 0 205 "887"
-D G "__DATE__" 0 205 ""26-jun-24""
-D G "__TIME__" 0 205 ""19:23:28""
-D G "_UNICODE" 0 205 ""?""
-D G "__EVAL" 0 205 ""?"" "Standard Header file for the PIC16F887 device ////////////////"
+F N "zera_jogo" 0 362 ""
+D G "__PCM__" 0 373 ""5.076""
+D G "__DEVICE__" 0 373 "887"
+D G "__DATE__" 0 373 ""26-jun-24""
+D G "__TIME__" 0 373 ""19:41:43""
+D G "_UNICODE" 0 373 ""?""
+D G "__EVAL" 0 373 ""?"" "Standard Header file for the PIC16F887 device ////////////////"
 c L "set_tris_a" 2 3 6 "FUNCTION"
 f N "set_tris_a" 2 39 ""
 v L "value" 2 39 "int8" `55 
@@ -1200,35 +1201,46 @@ V G "i" 0 5 "int8" `649
 V G "j" 0 5 "int8" `650 
 V G "x" 0 5 "int8" `651 
 V G "y" 0 5 "int8" `652 
-V G "filtro_reset" 0 5 "int8" `653 
-V G "filtro_mov" 0 5 "int8" `654 
-V G "filtro_conf" 0 5 "int8" `655 
-V G "pontuacaoJ1" 0 6 "int8" `656 
-V G "pontuacaoJ2" 0 6 "int8" `657 
-V G "ganhador" 0 6 "int8" `658 
-V G "tabuleiro" 0 7 "int8[3][3]" `659 
+V G "cursorx" 0 5 "int8" `653 
+V G "cursory" 0 5 "int8" `654 
+V G "filtro_reset" 0 5 "int8" `655 
+V G "filtro_mov" 0 5 "int8" `656 
+V G "filtro_conf" 0 5 "int8" `657 
+V G "pontuacaoJ1" 0 6 "int8" `658 
+V G "pontuacaoJ2" 0 6 "int8" `659 
+V G "ganhador" 0 6 "int8" `660 
+V G "contvelha" 0 6 "int8" `661 
+V G "tabuleiro" 0 7 "int8[3][3]" `662 
 F N "reinicia_tabuleiro" 0 9 ""
-f G "reinicia_tabuleiro" 0 9 "void(??0 * reinicia_tabuleiro)" `661 
+f G "reinicia_tabuleiro" 0 9 "void()" `664 
 F N "acende_tabuleiro" 0 10 ""
-f G "acende_tabuleiro" 0 10 "void()" `662 
-F N "verifica_ganhador" 0 11 ""
-V L "??65535" 0 11 "*int8" `664 
-f G "verifica_ganhador" 0 11 "int8(*int8 )" `663 
-F N "TIMER0_isr" 0 14 ""
-F G "TIMER0_isr" 0 15 "void()" `665 
-F N "MAIN" 0 25 ""
-F G "MAIN" 0 26 "void()" `666 
-C L "MAIN" 0 27 1 "FUNCTION"
-C L "MAIN" 0 27 9 "FUNCTION"
-C L "MAIN" 0 27 1 "FUNCTION"
-C L "MAIN" 0 27 1 "FUNCTION"
-F N "reinicia_tabuleiro" 0 109 ""
-F G "reinicia_tabuleiro" 0 110 "void()" `661 
-F N "acende_tabuleiro" 0 120 ""
-F G "acende_tabuleiro" 0 121 "void()" `662 
-F N "verifica_ganhador" 0 195 ""
-V L "matriz" 0 195 "??0 *" `673 
-F G "verifica_ganhador" 0 196 "int8(??0 * matriz)" `672 
+f G "acende_tabuleiro" 0 10 "void()" `665 
+F N "move_cursor" 0 11 ""
+f G "move_cursor" 0 11 "void()" `666 
+F N "verifica_ganhador" 0 12 ""
+V L "matriz" 0 12 "??0 *" `668 
+f G "verifica_ganhador" 0 12 "int8(??0 * matriz)" `667 
+F N "zera_jogo" 0 13 ""
+f G "zera_jogo" 0 13 "void()" `671 
+F N "TIMER0_isr" 0 16 ""
+F G "TIMER0_isr" 0 17 "void()" `672 
+F N "MAIN" 0 27 ""
+F G "MAIN" 0 28 "void()" `673 
+C L "MAIN" 0 29 1 "FUNCTION"
+C L "MAIN" 0 29 9 "FUNCTION"
+C L "MAIN" 0 29 1 "FUNCTION"
+C L "MAIN" 0 29 1 "FUNCTION"
+F N "reinicia_tabuleiro" 0 133 ""
+F G "reinicia_tabuleiro" 0 134 "void()" `664 
+F N "acende_tabuleiro" 0 147 ""
+F G "acende_tabuleiro" 0 148 "void()" `665 
+F N "move_cursor" 0 305 ""
+F G "move_cursor" 0 306 "void()" `666 
+F N "verifica_ganhador" 0 341 ""
+V L "matriz" 0 341 "??0 *" `680 
+F G "verifica_ganhador" 0 342 "int8(??0 * matriz)" `667 
+F N "zera_jogo" 0 362 ""
+F G "zera_jogo" 0 363 "void()" `671 
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep_ulpwu" 1 0

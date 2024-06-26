@@ -155,136 +155,148 @@ void acende_tabuleiro()
 	output_low(GREEN1);
 	output_low(GREEN2);
 	output_low(GREEN3);
+	void acende_tabuleiro()
+	{
+		output_high(LIN1);
+		output_high(LIN2);
+		output_high(LIN3);
+		output_low(RED1);
+		output_low(RED2);
+		output_low(RED3);
+		output_low(GREEN1);
+		output_low(GREEN2);
+		output_low(GREEN3);
 
-	if (x == 0)
-	{
-		output_low(LIN1);
-	}
-
-	else if (x == 1)
-	{
-		output_low(LIN2);
-	}
-
-	else
-	{
-		output_low(LIN3);
-	}
-	if (x == 0)
-	{
-		output_low(LIN1);
-	}
-	else if (x == 1)
-	{
-		output_low(LIN2);
-	}
-	else
-	{
-		output_low(LIN3);
-	}
-
-	if (tabuleiro[x][y] == 1)
-	{
-		if (y == 0)
+		if (x == 0)
 		{
-			output_high(RED1);
-		}
-		else if (y == 1)
-		{
-			output_high(RED2);
-		}
-		else
-		{
-			output_high(RED3);
-		}
-	}
-	else if (tabuleiro[x][y] == 2)
-	{
-		if (y == 0)
-		{
-			output_high(GREEN1);
-		}
-		else if (y == 1)
-		{
-			output_high(GREEN2);
-		}
-		else
-		{
-			output_high(GREEN3);
-		}
-	}
-	else if (tabuleiro[x][y] == 0)
-	{
-		if (y == 0)
-		{
-			output_high(RED1);
-			output_high(GREEN1);
-		}
-		else if (y == 1)
-		{
-			output_high(RED2);
-			output_high(GREEN2);
-		}
-		else
-		{
-			output_high(RED3);
-			output_high(GREEN3);
-		}
-	}
-	if (tabuleiro[x][y] == 1)
-	{
-		if (y == 0)
-		{
-			output_high(RED1);
+			output_low(LIN1);
 		}
 
-		else if (y == 1)
+		else if (x == 1)
 		{
-			output_high(RED2);
+			output_low(LIN2);
 		}
 
 		else
 		{
-			output_high(RED3);
+			output_low(LIN3);
 		}
-	}
-
-	else if (tabuleiro[x][y] == 2)
-	{
-		if (y == 0)
+		if (x == 0)
 		{
-			output_high(GREEN1);
+			output_low(LIN1);
 		}
-
-		else if (y == 1)
+		else if (x == 1)
 		{
-			output_high(GREEN2);
+			output_low(LIN2);
 		}
-
 		else
 		{
-			output_high(GREEN3);
-		}
-	}
-
-	else if (tabuleiro[x][y] == 0)
-	{
-		if (y == 0)
-		{
-			output_high(RED1);
-			output_high(GREEN1);
+			output_low(LIN3);
 		}
 
-		else if (y == 1)
+		if (tabuleiro[x][y] == 1)
 		{
-			output_high(RED2);
-			output_high(GREEN2);
+			if (y == 0)
+			{
+				output_high(RED1);
+			}
+			else if (y == 1)
+			{
+				output_high(RED2);
+			}
+			else
+			{
+				output_high(RED3);
+			}
+		}
+		else if (tabuleiro[x][y] == 2)
+		{
+			if (y == 0)
+			{
+				output_high(GREEN1);
+			}
+			else if (y == 1)
+			{
+				output_high(GREEN2);
+			}
+			else
+			{
+				output_high(GREEN3);
+			}
+		}
+		else if (tabuleiro[x][y] == 0)
+		{
+			if (y == 0)
+			{
+				output_high(RED1);
+				output_high(GREEN1);
+			}
+			else if (y == 1)
+			{
+				output_high(RED2);
+				output_high(GREEN2);
+			}
+			else
+			{
+				output_high(RED3);
+				output_high(GREEN3);
+			}
+		}
+		if (tabuleiro[x][y] == 1)
+		{
+			if (y == 0)
+			{
+				output_high(RED1);
+			}
+
+			else if (y == 1)
+			{
+				output_high(RED2);
+			}
+
+			else
+			{
+				output_high(RED3);
+			}
 		}
 
-		else
+		else if (tabuleiro[x][y] == 2)
 		{
-			output_high(RED3);
-			output_high(GREEN3);
+			if (y == 0)
+			{
+				output_high(GREEN1);
+			}
+
+			else if (y == 1)
+			{
+				output_high(GREEN2);
+			}
+
+			else
+			{
+				output_high(GREEN3);
+			}
+		}
+
+		else if (tabuleiro[x][y] == 0)
+		{
+			if (y == 0)
+			{
+				output_high(RED1);
+				output_high(GREEN1);
+			}
+
+			else if (y == 1)
+			{
+				output_high(RED2);
+				output_high(GREEN2);
+			}
+
+			else
+			{
+				output_high(RED3);
+				output_high(GREEN3);
+			}
 		}
 	}
 }
