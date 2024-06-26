@@ -1,8 +1,8 @@
-CCS PCM C Compiler, Version 5.076, 56587               26-jun-24 11:27
+CCS PCM C Compiler, Version 5.076, 56587               26-jun-24 18:33
 
                Filename:   D:\Documentos\Faculdade\6o_Periodo\Microprocessadores_e_Microcontroladores\Projetos\C\Projeto Final\Jogo_Da_Velha_Com_PIC16F877A\Projeto_Final_Codigo\PF.lst
 
-               ROM used:   389 words (5%)
+               ROM used:   374 words (5%)
                            Largest free fragment is 2048
                RAM used:   31 (8%) at main() level
                            33 (9%) worst case
@@ -525,7 +525,7 @@ CCS PCM C Compiler, Version 5.076, 56587               26-jun-24 11:27
 ....................    } 
 0138:  BCF    0A.3
 0139:  BCF    0A.4
-013A:  GOTO   175 (RETURN)
+013A:  GOTO   166 (RETURN)
 .................... } 
 ....................  
 .................... int8 verifica_ganhador(int8 matriz[3][3]) 
@@ -598,77 +598,62 @@ CCS PCM C Compiler, Version 5.076, 56587               26-jun-24 11:27
 ....................    reinicia_tabuleiro(); 
 0162:  GOTO   066
 ....................  
-....................    tabuleiro[0][0] = 1; 
-0163:  MOVLW  01
-0164:  MOVWF  31
-....................    tabuleiro[0][1] = 2; 
-0165:  MOVLW  02
-0166:  MOVWF  32
-....................    tabuleiro[0][2] = 0; 
-0167:  CLRF   33
-....................    tabuleiro[1][0] = 1; 
-0168:  MOVLW  01
-0169:  MOVWF  34
-....................    tabuleiro[1][1] = 2; 
-016A:  MOVLW  02
-016B:  MOVWF  35
-....................    tabuleiro[1][2] = 0; 
-016C:  CLRF   36
-....................    tabuleiro[2][0] = 1; 
-016D:  MOVLW  01
-016E:  MOVWF  37
-....................    tabuleiro[2][1] = 2; 
-016F:  MOVLW  02
-0170:  MOVWF  38
-....................    tabuleiro[2][2] = 0; 
-0171:  CLRF   39
+.................... //!   tabuleiro[0][0] = 1; 
+.................... //!   tabuleiro[0][1] = 2; 
+.................... //!   tabuleiro[0][2] = 0; 
+.................... //!   tabuleiro[1][0] = 1; 
+.................... //!   tabuleiro[1][1] = 2; 
+.................... //!   tabuleiro[1][2] = 0; 
+.................... //!   tabuleiro[2][0] = 1; 
+.................... //!   tabuleiro[2][1] = 2; 
+.................... //!   tabuleiro[2][2] = 0; 
 ....................  
 ....................    WHILE(TRUE) 
 ....................    { 
 ....................  
 ....................       if (fimtempo) 
-0172:  BTFSS  27.0
-0173:  GOTO   183
+0163:  BTFSS  27.0
+0164:  GOTO   174
 ....................       { 
 ....................  
 ....................          acende_tabuleiro(); 
-0174:  GOTO   083
+0165:  GOTO   083
 ....................  
 ....................          y += 1; 
-0175:  MOVLW  01
-0176:  ADDWF  2D,F
+0166:  MOVLW  01
+0167:  ADDWF  2D,F
 ....................  
 ....................          if (y == 3) 
-0177:  MOVF   2D,W
-0178:  SUBLW  03
-0179:  BTFSS  03.2
-017A:  GOTO   182
+0168:  MOVF   2D,W
+0169:  SUBLW  03
+016A:  BTFSS  03.2
+016B:  GOTO   173
 ....................          { 
 ....................  
 ....................             x += 1; 
-017B:  MOVLW  01
-017C:  ADDWF  2C,F
+016C:  MOVLW  01
+016D:  ADDWF  2C,F
 ....................             y = 0; 
-017D:  CLRF   2D
+016E:  CLRF   2D
 ....................  
 ....................             if (x == 3) 
-017E:  MOVF   2C,W
-017F:  SUBLW  03
-0180:  BTFSC  03.2
+016F:  MOVF   2C,W
+0170:  SUBLW  03
+0171:  BTFSC  03.2
 ....................             { 
 ....................  
 ....................                x = 0; 
-0181:  CLRF   2C
+0172:  CLRF   2C
 ....................             } 
 ....................          } 
 ....................  
 ....................          fimtempo = 0; 
-0182:  BCF    27.0
+0173:  BCF    27.0
 ....................       } 
-0183:  GOTO   172
+0174:  GOTO   163
 ....................    } 
 .................... } 
-0184:  SLEEP
+0175:  SLEEP
 
 Configuration Fuses:
    Word  1: 2CC2   HS NOWDT PUT NOMCLR NOPROTECT NOCPD NOBROWNOUT IESO FCMEN NOLVP NODEBUG

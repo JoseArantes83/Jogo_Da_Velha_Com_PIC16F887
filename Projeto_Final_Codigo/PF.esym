@@ -1,7 +1,7 @@
 D G "__PCM__" 0 205 ""5.076""
 D G "__DEVICE__" 0 205 "887"
 D G "__DATE__" 0 205 ""26-jun-24""
-D G "__TIME__" 0 205 ""11:27:50""
+D G "__TIME__" 0 205 ""18:33:52""
 D G "_UNICODE" 0 205 ""?""
 D G "__EVAL" 0 205 ""?"" "Standard Header file for the PIC16F887 device ////////////////"
 c L "set_tris_a" 2 3 6 "FUNCTION"
@@ -1213,6 +1213,7 @@ F G "verifica_ganhador" 0 138 "int8(??0 * matriz)" `661
 F N "MAIN" 0 159 ""
 F G "MAIN" 0 160 "void()" `665 
 C L "MAIN" 0 161 1 "FUNCTION"
+C L "MAIN" 0 161 9 "FUNCTION"
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep_ulpwu" 1 0

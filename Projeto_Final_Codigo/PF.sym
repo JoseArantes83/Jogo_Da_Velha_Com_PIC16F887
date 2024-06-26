@@ -115,14 +115,14 @@ Project Directory:
     D:\Documentos\Faculdade\6o_Periodo\Microprocessadores_e_Microcontroladores\Projetos\C\Projeto Final\Jogo_Da_Velha_Com_PIC16F877A\Projeto_Final_Codigo\
 
 Project Files:
-    PF.c                                                    [26-jun-24 11:27  CRC=A3DE9905]
-    PF.h                                                    [26-jun-24 11:27  CRC=5E7D27E4]
+    PF.c                                                    [26-jun-24 18:33  CRC=A6F87656]
+    PF.h                                                    [26-jun-24 18:09  CRC=5E7D27E4]
     C:\Program Files (x86)\PICC\Devices\16F887.h            [15-jan-18 15:53  CRC=9C71CB72]
 
-Source signature=3B3F57CD
+Source signature=3E59351E
 Program memory checksum=0000
 Program memory CRC=0000
-Hex file CRC=056B
+Hex file CRC=2CFC
 
 Units:
     PF (main)

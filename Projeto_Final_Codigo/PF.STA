@@ -1,9 +1,9 @@
 
-ROM used:   389/8192 (5%)
-            389/8192 (5%) including unused fragments
+ROM used:   374/8192 (5%)
+            374/8192 (5%) including unused fragments
 
             0.4 Average locations per line
-            4.0 Average locations per statement
+            4.2 Average locations per statement
 
 RAM used:   31/368 (8%) at main() level
             33/368 (9%) worst case
@@ -13,38 +13,38 @@ Stack size: 8
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  204    98 100  PF.c
+  204    89 100  PF.c
    50     0   0  PF.h
   786     0   0  C:\Program Files (x86)\PICC\Devices\16F887.h
 ----- -----
- 1040    98 Total
+ 1040    89 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------
 0     18   5    0     88  2.9  TIMER0_isr
-0     29   7    2    172  3.9  reinicia_tabuleiro
-0     37  10    2             @MUL88
-0    184  47    1   1218  3.4  acende_tabuleiro
-0     74  19    0    844  4.8  MAIN
- Inline         0             @cinit1
+0     29   8    2    172  3.9  reinicia_tabuleiro
+0     37  10    2    154  1.8  @MUL88
+0    184  49    1   1218  3.4  acende_tabuleiro
+0     59  16    0    333  4.2  MAIN
+ Inline         0   1270  7.3  @cinit1
 
 Program metrics:
-    Functions               4
-    Statements              98
-    Comments                136
-    Volume (V)              2946
-    Difficulty (D)          15.5
-    Effort to implement (E) 45770
-    Time to implement (T)   42 minutes
-    Est Delivered Bugs (B)  0
-    Cyclomatic Complexity   17
-    Maintainability (MI)    103
+    Functions               6
+    Statements              89
+    Comments                145
+    Volume (V)              4387
+    Difficulty (D)          24.2
+    Effort to implement (E) 106277
+    Time to implement (T)   1 hours, 38 minutes
+    Est Delivered Bugs (B)  1
+    Cyclomatic Complexity   22
+    Maintainability (MI)    141
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00003     4  0  
 00004-0002E    43  0  
-0002F-007FF   342  1659  
+0002F-007FF   327  1674  
 00800-00FFF     0  2048  
 01000-017FF     0  2048  
 01800-01FFF     0  2048  
