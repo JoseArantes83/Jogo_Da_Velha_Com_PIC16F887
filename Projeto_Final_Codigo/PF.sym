@@ -1,6 +1,5 @@
 004-005 @READ_PROGRAM_MEMORY8.P1
 004-005 @WRITE_PROGRAM_MEMORY8.P2
-008     PSP_DATA
 015     CCP_1_LOW
 015     CCP_1
 016     CCP_1_HIGH
@@ -14,17 +13,32 @@
 024     @INTERRUPT_AREA
 025     @INTERRUPT_AREA
 026     @INTERRUPT_AREA
+027.0   fimtempo
+028-029 tempo
+02A     i
+02B     j
+02C     x
+02D     y
+02E     pontuacaoJ1
+02F     pontuacaoJ2
+030     ganhador
+031-039 tabuleiro
+03A     @MUL88.P1
+03A     reinicia_tabuleiro.@SCRATCH1
+03A     acende_tabuleiro.@SCRATCH1
+03B     @MUL88.P1
+03B     reinicia_tabuleiro.@SCRATCH2
 077     @SCRATCH
 078     @SCRATCH
 078     _RETURN_
 079     @SCRATCH
 07A     @SCRATCH
 07F     @INTERRUPT_AREA
-09C.6   C1OUT
-09C.7   C2OUT
 0FF     @INTERRUPT_AREA
-10D-10E @READ_PROGRAM_MEMORY8.P1
-10D-10E @WRITE_PROGRAM_MEMORY8.P2
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
 17F     @INTERRUPT_AREA
 1FF     @INTERRUPT_AREA
 27F     @INTERRUPT_AREA
@@ -90,28 +104,31 @@ FFF     @INTERRUPT_AREA
 
 ROM Allocation:
 00002F  TIMER0_isr
-000033  MAIN
-000033  @cinit1
-00003D  @cinit2
+000041  @MUL88
+000066  reinicia_tabuleiro
+000083  acende_tabuleiro
+00013B  MAIN
+00013B  @cinit1
+000157  @cinit2
 
 Project Directory:
-    D:\projetos_pic\Jogo_Da_Velha_Com_PIC16F877A\Projeto_Final_Codigo\
+    D:\Documentos\Faculdade\6o_Periodo\Microprocessadores_e_Microcontroladores\Projetos\C\Projeto Final\Jogo_Da_Velha_Com_PIC16F877A\Projeto_Final_Codigo\
 
 Project Files:
-    PF.c                                                    [18-jun-24 15:12  CRC=06A88147]
-    PF.h                                                    [18-jun-24 15:12  CRC=B053860F]
-    ..\..\..\Desenvolvimento IDE's\PIC Compiler -  CCS v.5.076\PICC\Devices\16F877A.h [15-jan-18 15:53  CRC=63418C39]
+    PF.c                                                    [26-jun-24 11:27  CRC=A3DE9905]
+    PF.h                                                    [26-jun-24 11:27  CRC=5E7D27E4]
+    C:\Program Files (x86)\PICC\Devices\16F887.h            [15-jan-18 15:53  CRC=9C71CB72]
 
-Source signature=7D7F1FC8
+Source signature=3B3F57CD
 Program memory checksum=0000
 Program memory CRC=0000
-Hex file CRC=D3F9
+Hex file CRC=056B
 
 Units:
     PF (main)
 
 Compiler Settings:
-    Processor:      PIC16F877A
+    Processor:      PIC16F887
     Pointer Size:   16
     ADC Range:      0-1023
     Opt Level:      9

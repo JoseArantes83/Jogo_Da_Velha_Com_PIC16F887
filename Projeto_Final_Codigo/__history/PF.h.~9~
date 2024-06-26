@@ -46,4 +46,4 @@
 #define B5 PIN_D4
 #define B6 PIN_D5
 #define B7 PIN_D6
-#define B8 PIN_D7
+#define B8 PIN_D7

@@ -22,13 +22,20 @@ void TIMER0_isr(VOID)
 
 void reinicia_tabuleiro()
 {
-   for (i = 0; i < 3; i++)
-   {
 
-      for (j = 0; j < 3; j++)
+   enable_interrupts(INT_TIMER0);
+   enable_interrupts(GLOBAL);
+
+   while (TRUE)
+   {
+      for (i = 0; i < 3; i++)
       {
 
-         tabuleiro[i][j] = -1;
+         for (j = 0; j < 3; j++)
+         {
+
+            tabuleiro[i][j] = -1;
+         }
       }
    }
 }
