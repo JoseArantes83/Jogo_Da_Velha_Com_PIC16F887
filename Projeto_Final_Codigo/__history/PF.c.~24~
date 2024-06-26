@@ -51,6 +51,7 @@ int8 verifica_ganhador(int8 matriz[3][3]){
 void main(){
 
    setup_timer_0(RTCC_INTERNAL|RTCC_DIV_8|RTCC_8_BIT);      //1,0 ms overflow
+
    enable_interrupts(INT_TIMER0);
    enable_interrupts(GLOBAL);
    
