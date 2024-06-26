@@ -1,10 +1,9 @@
-F N "zera_jogo" 0 362 ""
-D G "__PCM__" 0 373 ""5.076""
-D G "__DEVICE__" 0 373 "887"
-D G "__DATE__" 0 373 ""26-jun-24""
-D G "__TIME__" 0 373 ""19:41:43""
-D G "_UNICODE" 0 373 ""?""
-D G "__EVAL" 0 373 ""?"" "Standard Header file for the PIC16F887 device ////////////////"
+D G "__PCM__" 0 360 ""5.076""
+D G "__DEVICE__" 0 360 "887"
+D G "__DATE__" 0 360 ""26-jun-24""
+D G "__TIME__" 0 360 ""19:44:04""
+D G "_UNICODE" 0 360 ""?""
+D G "__EVAL" 0 360 ""?"" "Standard Header file for the PIC16F887 device ////////////////"
 c L "set_tris_a" 2 3 6 "FUNCTION"
 f N "set_tris_a" 2 39 ""
 v L "value" 2 39 "int8" `55 
@@ -1229,18 +1228,17 @@ F G "MAIN" 0 28 "void()" `673
 C L "MAIN" 0 29 1 "FUNCTION"
 C L "MAIN" 0 29 9 "FUNCTION"
 C L "MAIN" 0 29 1 "FUNCTION"
-C L "MAIN" 0 29 1 "FUNCTION"
 F N "reinicia_tabuleiro" 0 133 ""
 F G "reinicia_tabuleiro" 0 134 "void()" `664 
 F N "acende_tabuleiro" 0 147 ""
 F G "acende_tabuleiro" 0 148 "void()" `665 
-F N "move_cursor" 0 305 ""
-F G "move_cursor" 0 306 "void()" `666 
-F N "verifica_ganhador" 0 341 ""
-V L "matriz" 0 341 "??0 *" `680 
-F G "verifica_ganhador" 0 342 "int8(??0 * matriz)" `667 
-F N "zera_jogo" 0 362 ""
-F G "zera_jogo" 0 363 "void()" `671 
+F N "move_cursor" 0 292 ""
+F G "move_cursor" 0 293 "void()" `666 
+F N "verifica_ganhador" 0 328 ""
+V L "matriz" 0 328 "??0 *" `680 
+F G "verifica_ganhador" 0 329 "int8(??0 * matriz)" `667 
+F N "zera_jogo" 0 349 ""
+F G "zera_jogo" 0 350 "void()" `671 
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep_ulpwu" 1 0

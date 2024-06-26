@@ -65,7 +65,7 @@ void main()
 			if (filtro_mov == 0 && ja_li_mov == 0)
 			{
 				ja_li_mov = 1;
-				// executar função move_cursor()
+				move_cursor();
 			}
 		}
 		else

@@ -1,0 +1,21 @@
+ÀÄPF
+   ÃÄMAIN  0/128  Ram=1
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄreinicia_tabuleiro  0/31  Ram=2
+   ³  ³  ÀÄ@MUL88  0/37  Ram=2
+   ³  ÃÄreinicia_tabuleiro  0/31  Ram=2
+   ³  ³  ÀÄ*
+   ³  ÃÄmove_cursor  0/63  Ram=2
+   ³  ³  ÃÄ@MUL88  0/37  Ram=2
+   ³  ³  ÃÄ@MUL88  0/37  Ram=2
+   ³  ³  ÀÄ@MUL88  0/37  Ram=2
+   ³  ÃÄacende_tabuleiro  0/326  Ram=1
+   ³  ³  ÃÄ@MUL88  0/37  Ram=2
+   ³  ³  ÃÄ@MUL88  0/37  Ram=2
+   ³  ³  ÃÄ@MUL88  0/37  Ram=2
+   ³  ³  ÃÄ@MUL88  0/37  Ram=2
+   ³  ³  ÃÄ@MUL88  0/37  Ram=2
+   ³  ³  ÀÄ@MUL88  0/37  Ram=2
+   ³  ÀÄreinicia_tabuleiro  0/31  Ram=2
+   ³     ÀÄ*
+   ÀÄTIMER0_isr  0/17  Ram=0
