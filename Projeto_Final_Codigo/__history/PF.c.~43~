@@ -12,7 +12,7 @@ void TIMER0_isr(VOID)
 
    tempo += 1;
 
-   if (tempo == 50)
+   if (tempo == 5)
    {
 
       tempo = 0;
@@ -164,15 +164,15 @@ void main()
 
    reinicia_tabuleiro();
 
-//!   tabuleiro[0][0] = 1;
-//!   tabuleiro[0][1] = 2;
-//!   tabuleiro[0][2] = 0;
-//!   tabuleiro[1][0] = 1;
-//!   tabuleiro[1][1] = 2;
-//!   tabuleiro[1][2] = 0;
-//!   tabuleiro[2][0] = 1;
-//!   tabuleiro[2][1] = 2;
-//!   tabuleiro[2][2] = 0;
+   tabuleiro[0][0] = 1;
+   tabuleiro[0][1] = 2;
+   tabuleiro[0][2] = 0;
+   tabuleiro[1][0] = 1;
+   tabuleiro[1][1] = 2;
+   tabuleiro[1][2] = 0;
+   tabuleiro[2][0] = 1;
+   tabuleiro[2][1] = 2;
+   tabuleiro[2][2] = 0;
 
    WHILE(TRUE)
    {

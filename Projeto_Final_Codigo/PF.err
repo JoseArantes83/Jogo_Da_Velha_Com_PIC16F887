@@ -1,8 +1,7 @@
-Compiling D:\Documentos\Faculdade\6o_Periodo\Microprocessadores_e_Microcontroladores\Projetos\C\Projeto Final\Jogo_Da_Velha_Com_PIC16F877A\Projeto_Final_Codigo\PF on 26-jun-24 at 11:30
->>> Warning 202 "PF.c" Line 4(6,17): Variable never used:   pontuacaoJ1
->>> Warning 202 "PF.c" Line 4(23,34): Variable never used:   pontuacaoJ2
->>> Warning 202 "PF.c" Line 4(40,48): Variable never used:   ganhador
->>> Warning 202 "PF.c" Line 29(16,17): Variable never used:   j
-      Memory usage:   ROM=2%      RAM=7% - 8%
-      0 Errors,  4 Warnings.
+Compiling D:\Documentos\Faculdade\6o_Periodo\Microprocessadores_e_Microcontroladores\Projetos\C\Projeto Final\Jogo_Da_Velha_Com_PIC16F877A\Projeto_Final_Codigo\PF on 26-jun-24 at 18:33
+>>> Warning 202 "PF.c" Line 6(6,17): Variable never used:   pontuacaoJ1
+>>> Warning 202 "PF.c" Line 6(23,34): Variable never used:   pontuacaoJ2
+>>> Warning 202 "PF.c" Line 6(40,48): Variable never used:   ganhador
+      Memory usage:   ROM=5%      RAM=8% - 9%
+      0 Errors,  3 Warnings.
 Build Successful.

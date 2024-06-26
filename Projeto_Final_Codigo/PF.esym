@@ -1,7 +1,7 @@
 D G "__PCM__" 0 205 ""5.076""
 D G "__DEVICE__" 0 205 "887"
 D G "__DATE__" 0 205 ""26-jun-24""
-D G "__TIME__" 0 205 ""11:30:40""
+D G "__TIME__" 0 205 ""18:33:52""
 D G "_UNICODE" 0 205 ""?""
 D G "__EVAL" 0 205 ""?"" "Standard Header file for the PIC16F887 device ////////////////"
 c L "set_tris_a" 2 3 6 "FUNCTION"
@@ -1191,24 +1191,29 @@ D G "B5" 1 46 "PIN_D4"
 D G "B6" 1 47 "PIN_D5"
 D G "B7" 1 48 "PIN_D6"
 D G "B8" 1 49 "PIN_D7"
-V G "i" 0 3 "int8" `644 
-V G "j" 0 3 "int8" `645 
-V G "pontuacaoJ1" 0 4 "int8" `646 
-V G "pontuacaoJ2" 0 4 "int8" `647 
-V G "ganhador" 0 4 "int8" `648 
-V G "tabuleiro" 0 5 "int8[3][3]" `649 
-F N "TIMER0_isr" 0 8 ""
-F G "TIMER0_isr" 0 8 "void()" `651 
-F N "reinicia_tabuleiro" 0 13 ""
-F G "reinicia_tabuleiro" 0 13 "void()" `652 
-F N "verifica_ganhador" 0 27 ""
-V L "matriz" 0 27 "??0 *" `657 
-F G "verifica_ganhador" 0 27 "int8(??0 * matriz,int8 ,int8 )" `656 
-V L "i" 0 29 "int8" `660 
-V L "j" 0 29 "int8" `661 
-F N "MAIN" 0 51 ""
-F G "MAIN" 0 51 "void()" `662 
-C L "MAIN" 0 53 1 "FUNCTION"
+V G "fimtempo" 0 3 "int1" `644 
+V G "tempo" 0 4 "int16" `645 
+V G "i" 0 5 "int8" `646 
+V G "j" 0 5 "int8" `647 
+V G "x" 0 5 "int8" `648 
+V G "y" 0 5 "int8" `649 
+V G "pontuacaoJ1" 0 6 "int8" `650 
+V G "pontuacaoJ2" 0 6 "int8" `651 
+V G "ganhador" 0 6 "int8" `652 
+V G "tabuleiro" 0 7 "int8[3][3]" `653 
+F N "TIMER0_isr" 0 10 ""
+F G "TIMER0_isr" 0 11 "void()" `655 
+F N "reinicia_tabuleiro" 0 23 ""
+F G "reinicia_tabuleiro" 0 24 "void()" `656 
+F N "acende_tabuleiro" 0 36 ""
+F G "acende_tabuleiro" 0 37 "void()" `660 
+F N "verifica_ganhador" 0 137 ""
+V L "matriz" 0 137 "??0 *" `662 
+F G "verifica_ganhador" 0 138 "int8(??0 * matriz)" `661 
+F N "MAIN" 0 159 ""
+F G "MAIN" 0 160 "void()" `665 
+C L "MAIN" 0 161 1 "FUNCTION"
+C L "MAIN" 0 161 9 "FUNCTION"
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep_ulpwu" 1 0

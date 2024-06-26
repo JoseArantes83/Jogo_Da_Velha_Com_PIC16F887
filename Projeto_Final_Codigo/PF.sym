@@ -1,7 +1,7 @@
 004-005 @READ_PROGRAM_MEMORY8.P1
 004-005 @WRITE_PROGRAM_MEMORY8.P2
-015     CCP_1
 015     CCP_1_LOW
+015     CCP_1
 016     CCP_1_HIGH
 01B     CCP_2_LOW
 01B     CCP_2
@@ -13,16 +13,21 @@
 024     @INTERRUPT_AREA
 025     @INTERRUPT_AREA
 026     @INTERRUPT_AREA
-027     i
-028     j
-029     pontuacaoJ1
-02A     pontuacaoJ2
-02B     ganhador
-02C-034 tabuleiro
-035     @MUL88.P1
-035     reinicia_tabuleiro.@SCRATCH1
-036     @MUL88.P1
-036     reinicia_tabuleiro.@SCRATCH2
+027.0   fimtempo
+028-029 tempo
+02A     i
+02B     j
+02C     x
+02D     y
+02E     pontuacaoJ1
+02F     pontuacaoJ2
+030     ganhador
+031-039 tabuleiro
+03A     @MUL88.P1
+03A     reinicia_tabuleiro.@SCRATCH1
+03A     acende_tabuleiro.@SCRATCH1
+03B     @MUL88.P1
+03B     reinicia_tabuleiro.@SCRATCH2
 077     @SCRATCH
 078     @SCRATCH
 078     _RETURN_
@@ -99,24 +104,25 @@ FFF     @INTERRUPT_AREA
 
 ROM Allocation:
 00002F  TIMER0_isr
-000033  reinicia_tabuleiro
 000041  @MUL88
-000073  MAIN
-000073  @cinit1
-00008A  @cinit2
+000066  reinicia_tabuleiro
+000083  acende_tabuleiro
+00013B  MAIN
+00013B  @cinit1
+000157  @cinit2
 
 Project Directory:
     D:\Documentos\Faculdade\6o_Periodo\Microprocessadores_e_Microcontroladores\Projetos\C\Projeto Final\Jogo_Da_Velha_Com_PIC16F877A\Projeto_Final_Codigo\
 
 Project Files:
-    PF.c                                                    [26-jun-24 11:30  CRC=3E73EA1D]
-    PF.h                                                    [26-jun-24 11:27  CRC=5E7D27E4]
+    PF.c                                                    [26-jun-24 18:33  CRC=A6F87656]
+    PF.h                                                    [26-jun-24 18:09  CRC=5E7D27E4]
     C:\Program Files (x86)\PICC\Devices\16F887.h            [15-jan-18 15:53  CRC=9C71CB72]
 
-Source signature=D5D4A8E5
+Source signature=3E59351E
 Program memory checksum=0000
 Program memory CRC=0000
-Hex file CRC=3FDA
+Hex file CRC=2CFC
 
 Units:
     PF (main)
