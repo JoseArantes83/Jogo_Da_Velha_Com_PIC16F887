@@ -5,3 +5,14 @@
 *.esym
 *.hex
 *.lst
+*.STA
+*.sym
+*.tre
+*.xsym
+*.~9~
+*.~8~
+*.~7~
+*.~6~
+*.~5~
+*.~4~
+/Projeto_Final_Codigo/__history
