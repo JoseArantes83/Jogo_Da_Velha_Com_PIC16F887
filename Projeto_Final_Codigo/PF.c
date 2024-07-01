@@ -94,27 +94,27 @@ void main()
                 }
             }
 
-            // ganhador = verifica_ganhador(tabuleiro);
+            ganhador = verifica_ganhador(tabuleiro);
 
-            // if (ganhador != 0)
-            // {
-            //     if (ganhador == 1)
-            //     {
-            //         pontuacaoJ1++;
-            //         // DAR UM RETORNO VISUAL PARA O USUARIO
-            //     }
-            //     else if (ganhador == 2)
-            //     {
-            //         pontuacaoJ2++;
-            //         // DAR UM RETORNO VISUAL PARA O USUARIO
-            //     }
-            //     else
-            //     {
-            //         // DAR UM RETORNO VISUAL PARA O USUARIO QUE DEU VEIA
-            //     }
+            if (ganhador != 0)
+            {
+                if (ganhador == 1)
+                {
+                    pontuacaoJ1++;
+                    // DAR UM RETORNO VISUAL PARA O USUARIO
+                }
+                else if (ganhador == 2)
+                {
+                    pontuacaoJ2++;
+                    // DAR UM RETORNO VISUAL PARA O USUARIO
+                }
+                else
+                {
+                    // DAR UM RETORNO VISUAL PARA O USUARIO QUE DEU VEIA
+                }
 
-            //     reinicia_tabuleiro();
-            // }
+                reinicia_tabuleiro();
+            }
 
             fimtempo = 0;
         }
