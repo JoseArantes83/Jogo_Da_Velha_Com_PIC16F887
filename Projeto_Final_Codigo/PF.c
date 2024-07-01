@@ -1,9 +1,9 @@
 #include <PF.h>
 
-int1 fimtempo = 0, ja_li_reset = 0, ja_li_mov = 0, ja_li_conf = 0, isMovido = 0;
+int1 fimtempo = 0, ja_li_reset = 0, ja_li_mov = 0, ja_li_conf = 0, isMovido = 0, vez_jogador_verde = 1;
 int16 tempo = 0;
 int8 i = 0, j = 0, x = 0, y = 0, cursorx = 0, cursory = 0, filtro_reset = 100, filtro_mov = 100, filtro_conf = 100;
-int8 pontuacaoJ1 = 0, pontuacaoJ2 = 0, ganhador = 0, contvelha = 0;
+int8 pontuacaoJ1 = 0, pontuacaoJ2 = 0, ganhador = 0, contvelha = 0, x_aux, y_aux;
 int8 tabuleiro[3][3];
 
 void reinicia_tabuleiro();
@@ -11,6 +11,7 @@ void acende_tabuleiro();
 void move_cursor();
 int8 verifica_ganhador(int8 matriz[3][3]);
 void zera_jogo();
+void confirma_acao();
 
 #INT_TIMER0
 void TIMER0_isr(VOID)
@@ -64,20 +65,20 @@ void main()
             filtro_mov = 100;
         }
 
-        // if (input(B_CONFIRM) == 0)
-        // {
-        //    filtro_conf--;
-        //    if (filtro_conf == 0 && ja_li_conf == 0)
-        //    {
-        //       ja_li_conf = 1;
-        //       // executar função confirma_acao()
-        //    }
-        // }
-        // else
-        // {
-        //    ja_li_conf = 0;
-        //    filtro_conf = 100;
-        // }
+        if (input(B_CONFIRM) == 0)
+        {
+            filtro_conf--;
+            if (filtro_conf == 0 && ja_li_conf == 0)
+            {
+                ja_li_conf = 1;
+                confirma_acao();
+            }
+        }
+        else
+        {
+            ja_li_conf = 0;
+            filtro_conf = 100;
+        }
 
         if (fimtempo)
         {
@@ -93,33 +94,50 @@ void main()
                 }
             }
 
-            ganhador = verifica_ganhador(tabuleiro);
+            // ganhador = verifica_ganhador(tabuleiro);
 
-            if (ganhador != 0)
-            {
-                if (ganhador == 1)
-                {
+            // if (ganhador != 0)
+            // {
+            //     if (ganhador == 1)
+            //     {
+            //         pontuacaoJ1++;
+            //         // DAR UM RETORNO VISUAL PARA O USUARIO
+            //     }
+            //     else if (ganhador == 2)
+            //     {
+            //         pontuacaoJ2++;
+            //         // DAR UM RETORNO VISUAL PARA O USUARIO
+            //     }
+            //     else
+            //     {
+            //         // DAR UM RETORNO VISUAL PARA O USUARIO QUE DEU VEIA
+            //     }
 
-                    pontuacaoJ1++;
-                    // DAR UM RETORNO VISUAL PARA O USUARIO
-                }
-                else if (ganhador == 2)
-                {
-
-                    pontuacaoJ2++;
-                    // DAR UM RETORNO VISUAL PARA O USUARIO
-                }
-                else
-                {
-                    // DAR UM RETORNO VISUAL PARA O USUARIO QUE DEU VEIA
-                }
-
-                reinicia_tabuleiro();
-            }
+            //     reinicia_tabuleiro();
+            // }
 
             fimtempo = 0;
         }
     }
+}
+
+void confirma_acao()
+{
+    x_aux = cursorx;
+    y_aux = cursory;
+
+    move_cursor();
+
+    if (vez_jogador_verde == 1)
+    {
+        tabuleiro[x_aux][y_aux] = 2;
+    }
+    else
+    {
+        tabuleiro[x_aux][y_aux] = 1;
+    }
+
+    vez_jogador_verde = !vez_jogador_verde;
 }
 
 void reinicia_tabuleiro()
