@@ -3,8 +3,8 @@
 015     CCP_1_LOW
 015     CCP_1
 016     CCP_1_HIGH
-01B     CCP_2_LOW
 01B     CCP_2
+01B     CCP_2_LOW
 01C     CCP_2_HIGH
 020     @INTERRUPT_AREA
 021     @INTERRUPT_AREA
@@ -17,6 +17,7 @@
 027.1   ja_li_reset
 027.2   ja_li_mov
 027.3   ja_li_conf
+027.4   isMovido
 028-029 tempo
 02A     i
 02B     j
@@ -32,14 +33,17 @@
 035     ganhador
 036     contvelha
 037-03F tabuleiro
-040     @MUL88.P1
+040-041 verifica_ganhador.matriz
 040     MAIN.@SCRATCH1
 040     reinicia_tabuleiro.@SCRATCH1
 040     acende_tabuleiro.@SCRATCH1
 040     move_cursor.@SCRATCH1
-041     @MUL88.P1
 041     reinicia_tabuleiro.@SCRATCH2
 041     move_cursor.@SCRATCH2
+042     verifica_ganhador.@SCRATCH1
+043     @MUL88.P1
+043     verifica_ganhador.@SCRATCH2
+044     @MUL88.P1
 077     @SCRATCH
 078     @SCRATCH
 078     _RETURN_
@@ -119,23 +123,24 @@ ROM Allocation:
 000040  @MUL88
 000065  reinicia_tabuleiro
 000084  move_cursor
-0000C3  acende_tabuleiro
-000209  MAIN
-000209  @cinit1
-00022F  @cinit2
+0000BC  acende_tabuleiro
+000178  verifica_ganhador
+0002B2  MAIN
+0002B2  @cinit1
+0002D9  @cinit2
 
 Project Directory:
     D:\Documentos\Faculdade\6o_Periodo\Microprocessadores_e_Microcontroladores\Projetos\C\Projeto Final\Jogo_Da_Velha_Com_PIC16F877A\Projeto_Final_Codigo\
 
 Project Files:
-    PF.c                                                    [26-jun-24 19:43  CRC=6521180F]
-    PF.h                                                    [26-jun-24 19:25  CRC=B44598B6]
+    PF.c                                                    [01-jul-24 16:36  CRC=E2573050]
+    PF.h                                                    [01-jul-24 16:14  CRC=B44598B6]
     C:\Program Files (x86)\PICC\Devices\16F887.h            [15-jan-18 15:53  CRC=9C71CB72]
 
-Source signature=524A47A9
+Source signature=CF805FEA
 Program memory checksum=0000
 Program memory CRC=0000
-Hex file CRC=5724
+Hex file CRC=BE6B
 
 Units:
     PF (main)

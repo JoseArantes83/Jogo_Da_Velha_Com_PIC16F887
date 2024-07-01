@@ -1,9 +1,9 @@
-D G "__PCM__" 0 360 ""5.076""
-D G "__DEVICE__" 0 360 "887"
-D G "__DATE__" 0 360 ""26-jun-24""
-D G "__TIME__" 0 360 ""19:44:04""
-D G "_UNICODE" 0 360 ""?""
-D G "__EVAL" 0 360 ""?"" "Standard Header file for the PIC16F887 device ////////////////"
+D G "__PCM__" 0 331 ""5.076""
+D G "__DEVICE__" 0 331 "887"
+D G "__DATE__" 0 331 ""01-jul-24""
+D G "__TIME__" 0 331 ""16:40:46""
+D G "_UNICODE" 0 331 ""?""
+D G "__EVAL" 0 331 ""?"" "Standard Header file for the PIC16F887 device ////////////////"
 c L "set_tris_a" 2 3 6 "FUNCTION"
 f N "set_tris_a" 2 39 ""
 v L "value" 2 39 "int8" `55 
@@ -1171,9 +1171,9 @@ D G "RED3" 1 26 "PIN_B1"
 D G "GREEN1" 1 27 "PIN_B2"
 D G "GREEN2" 1 28 "PIN_B3"
 D G "GREEN3" 1 29 "PIN_B4"
-D G "LIN1" 1 30 "PIN_B5"
+D G "LIN1" 1 30 "PIN_B7"
 D G "LIN2" 1 31 "PIN_B6"
-D G "LIN3" 1 32 "PIN_B7"
+D G "LIN3" 1 32 "PIN_B5"
 D G "GND" 1 33 "PIN_E0"
 D G "A1" 1 34 "PIN_C0"
 D G "A2" 1 35 "PIN_C1"
@@ -1195,50 +1195,53 @@ V G "fimtempo" 0 3 "int1" `644
 V G "ja_li_reset" 0 3 "int1" `645 
 V G "ja_li_mov" 0 3 "int1" `646 
 V G "ja_li_conf" 0 3 "int1" `647 
-V G "tempo" 0 4 "int16" `648 
-V G "i" 0 5 "int8" `649 
-V G "j" 0 5 "int8" `650 
-V G "x" 0 5 "int8" `651 
-V G "y" 0 5 "int8" `652 
-V G "cursorx" 0 5 "int8" `653 
-V G "cursory" 0 5 "int8" `654 
-V G "filtro_reset" 0 5 "int8" `655 
-V G "filtro_mov" 0 5 "int8" `656 
-V G "filtro_conf" 0 5 "int8" `657 
-V G "pontuacaoJ1" 0 6 "int8" `658 
-V G "pontuacaoJ2" 0 6 "int8" `659 
-V G "ganhador" 0 6 "int8" `660 
-V G "contvelha" 0 6 "int8" `661 
-V G "tabuleiro" 0 7 "int8[3][3]" `662 
+V G "isMovido" 0 3 "int1" `648 
+V G "tempo" 0 4 "int16" `649 
+V G "i" 0 5 "int8" `650 
+V G "j" 0 5 "int8" `651 
+V G "x" 0 5 "int8" `652 
+V G "y" 0 5 "int8" `653 
+V G "cursorx" 0 5 "int8" `654 
+V G "cursory" 0 5 "int8" `655 
+V G "filtro_reset" 0 5 "int8" `656 
+V G "filtro_mov" 0 5 "int8" `657 
+V G "filtro_conf" 0 5 "int8" `658 
+V G "pontuacaoJ1" 0 6 "int8" `659 
+V G "pontuacaoJ2" 0 6 "int8" `660 
+V G "ganhador" 0 6 "int8" `661 
+V G "contvelha" 0 6 "int8" `662 
+V G "tabuleiro" 0 7 "int8[3][3]" `663 
 F N "reinicia_tabuleiro" 0 9 ""
-f G "reinicia_tabuleiro" 0 9 "void()" `664 
+f G "reinicia_tabuleiro" 0 9 "void()" `665 
 F N "acende_tabuleiro" 0 10 ""
-f G "acende_tabuleiro" 0 10 "void()" `665 
+f G "acende_tabuleiro" 0 10 "void()" `666 
 F N "move_cursor" 0 11 ""
-f G "move_cursor" 0 11 "void()" `666 
+f G "move_cursor" 0 11 "void()" `667 
 F N "verifica_ganhador" 0 12 ""
-V L "matriz" 0 12 "??0 *" `668 
-f G "verifica_ganhador" 0 12 "int8(??0 * matriz)" `667 
+V L "matriz" 0 12 "??0 *" `669 
+f G "verifica_ganhador" 0 12 "int8(??0 * matriz)" `668 
 F N "zera_jogo" 0 13 ""
-f G "zera_jogo" 0 13 "void()" `671 
+f G "zera_jogo" 0 13 "void()" `672 
 F N "TIMER0_isr" 0 16 ""
-F G "TIMER0_isr" 0 17 "void()" `672 
+F G "TIMER0_isr" 0 17 "void()" `673 
 F N "MAIN" 0 27 ""
-F G "MAIN" 0 28 "void()" `673 
+F G "MAIN" 0 28 "void()" `674 
 C L "MAIN" 0 29 1 "FUNCTION"
-C L "MAIN" 0 29 9 "FUNCTION"
+C L "MAIN" 0 29 8 "FUNCTION"
 C L "MAIN" 0 29 1 "FUNCTION"
-F N "reinicia_tabuleiro" 0 133 ""
-F G "reinicia_tabuleiro" 0 134 "void()" `664 
-F N "acende_tabuleiro" 0 147 ""
-F G "acende_tabuleiro" 0 148 "void()" `665 
-F N "move_cursor" 0 292 ""
-F G "move_cursor" 0 293 "void()" `666 
-F N "verifica_ganhador" 0 328 ""
-V L "matriz" 0 328 "??0 *" `680 
-F G "verifica_ganhador" 0 329 "int8(??0 * matriz)" `667 
-F N "zera_jogo" 0 349 ""
-F G "zera_jogo" 0 350 "void()" `671 
+C L "MAIN" 0 29 1 "FUNCTION"
+C L "MAIN" 0 29 1 "FUNCTION"
+F N "reinicia_tabuleiro" 0 125 ""
+F G "reinicia_tabuleiro" 0 126 "void()" `665 
+F N "acende_tabuleiro" 0 139 ""
+F G "acende_tabuleiro" 0 140 "void()" `666 
+F N "move_cursor" 0 214 ""
+F G "move_cursor" 0 215 "void()" `667 
+F N "verifica_ganhador" 0 239 ""
+V L "matriz" 0 239 "??0 *" `681 
+F G "verifica_ganhador" 0 240 "int8(??0 * matriz)" `668 
+F N "zera_jogo" 0 280 ""
+F G "zera_jogo" 0 281 "void()" `672 
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep_ulpwu" 1 0

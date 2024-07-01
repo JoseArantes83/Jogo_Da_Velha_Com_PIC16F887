@@ -1,4 +1,7 @@
-Compiling D:\Documentos\Faculdade\6o_Periodo\Microprocessadores_e_Microcontroladores\Projetos\C\Projeto Final\Jogo_Da_Velha_Com_PIC16F877A\Projeto_Final_Codigo\PF on 26-jun-24 at 19:44
-      Memory usage:   ROM=8%      RAM=10% - 11%
-      0 Errors,  0 Warnings.
+Compiling D:\Documentos\Faculdade\6o_Periodo\Microprocessadores_e_Microcontroladores\Projetos\C\Projeto Final\Jogo_Da_Velha_Com_PIC16F877A\Projeto_Final_Codigo\PF on 01-jul-24 at 16:40
+>>> Warning 240 "PF.c" Line 96(42,51): Pointer types do not match
+>>> Warning 202 "PF.c" Line 3(52,62): Variable never used:   ja_li_conf
+>>> Warning 202 "PF.c" Line 5(98,109): Variable never used:   filtro_conf
+      Memory usage:   ROM=10%      RAM=10% - 11%
+      0 Errors,  3 Warnings.
 Build Successful.
