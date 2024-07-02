@@ -267,10 +267,8 @@ int8 verifica_ganhador(int8 matriz[3][3])
 
     if (matriz[0][0] != -1 && matriz[0][0] == matriz[1][1] && matriz[0][0] == matriz[2][2])
         return matriz[0][0];
-
     else if (matriz[0][2] != -1 && matriz[0][2] == matriz[1][1] && matriz[0][2] == matriz[2][0])
         return matriz[0][2];
-
     else
     {
         contvelha = 0;
@@ -281,7 +279,6 @@ int8 verifica_ganhador(int8 matriz[3][3])
             {
                 if (tabuleiro[i][j] != -1 && tabuleiro[i][j] != 0)
                 {
-
                     contvelha++;
                 }
             }
@@ -289,7 +286,6 @@ int8 verifica_ganhador(int8 matriz[3][3])
 
         if (contvelha == 9)
             return 3;
-
         else
             return 0;
     }
