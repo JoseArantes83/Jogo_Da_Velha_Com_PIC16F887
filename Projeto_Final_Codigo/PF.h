@@ -30,7 +30,7 @@
 #define LIN1 PIN_B7
 #define LIN2 PIN_B6
 #define LIN3 PIN_B5
-#define GND PIN_E0
+// #define GND PIN_E0
 #define A1 PIN_C0
 #define A2 PIN_C1
 #define A3 PIN_C2

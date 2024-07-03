@@ -12,9 +12,11 @@ void move_cursor();
 int8 verifica_ganhador(int8 matriz[3][3]);
 void zera_jogo();
 void confirma_acao();
+void atualiza_displays();
+int8 converte_para_display(int8);
 
 #INT_TIMER0
-void TIMER0_isr(VOID)
+void TIMER0_isr(void)
 {
     tempo++;
 
@@ -32,6 +34,7 @@ void main()
     enable_interrupts(GLOBAL);
 
     reinicia_tabuleiro();
+    atualiza_displays();
 
     while (TRUE)
     {
@@ -94,6 +97,8 @@ void main()
                 }
             }
 
+            atualiza_displays();
+
             ganhador = verifica_ganhador(tabuleiro);
 
             if (ganhador != 0)
@@ -101,23 +106,69 @@ void main()
                 if (ganhador == 1)
                 {
                     pontuacaoJ1++;
-                    // DAR UM RETORNO VISUAL PARA O USUARIO
+                    // Atualizar valor do display referente � pontua��o do jogador 1.
                 }
                 else if (ganhador == 2)
                 {
                     pontuacaoJ2++;
-                    // DAR UM RETORNO VISUAL PARA O USUARIO
+                    // Atualizar valor do display referente � pontua��o do jogador 2.
                 }
-                else
+                else if(ganhador == 3)
                 {
-                    // DAR UM RETORNO VISUAL PARA O USUARIO QUE DEU VEIA
+                    // DAR UM RETORNO VISUAL PARA O USUÁRIO QUE DEU VELHA
                 }
 
                 reinicia_tabuleiro();
             }
 
+            atualiza_displays();
+
             fimtempo = 0;
         }
+    }
+}
+
+void atualiza_displays()
+{
+    output_c(converte_para_display(pontuacaoJ1));
+
+    output_d(converte_para_display(pontuacaoJ2));
+}
+
+int8 converte_para_display(valor)
+{
+    switch (valor)
+    {
+    case 0:
+        return 64;
+        break;
+    case 1:
+        return 121;
+        break;
+    case 2:
+        return 36;
+        break;
+    case 3:
+        return 48;
+        break;
+    case 4:
+        return 25;
+        break;
+    case 5:
+        return 18;
+        break;
+    case 6:
+        return 2;
+        break;
+    case 7:
+        return 120;
+        break;
+    case 8:
+        return 0;
+        break;
+    case 9:
+        return 16;
+        break;
     }
 }
 
@@ -130,11 +181,11 @@ void confirma_acao()
 
     if (vez_jogador_verde == 1)
     {
-        tabuleiro[x_aux][y_aux] = 2;
+        tabuleiro[x_aux][y_aux] = 1;
     }
     else
     {
-        tabuleiro[x_aux][y_aux] = 1;
+        tabuleiro[x_aux][y_aux] = 2;
     }
 
     vez_jogador_verde = !vez_jogador_verde;
@@ -286,8 +337,9 @@ int8 verifica_ganhador(int8 matriz[3][3])
 
         if (contvelha == 9)
             return 3;
-        else
+        else{
             return 0;
+        }
     }
 }
 
