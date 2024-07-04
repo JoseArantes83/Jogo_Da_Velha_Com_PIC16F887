@@ -20,7 +20,7 @@ void TIMER0_isr(void)
 {
     tempo++;
 
-    if (tempo == 35)
+    if (tempo == 100)
     {
         tempo = 0;
         fimtempo = 1;
@@ -207,9 +207,9 @@ void reinicia_tabuleiro()
 
 void acende_tabuleiro()
 {
-    output_high(LIN1);
-    output_high(LIN2);
-    output_high(LIN3);
+    output_low(LIN1);
+    output_low(LIN2);
+    output_low(LIN3);
     output_low(RED1);
     output_low(RED2);
     output_low(RED3);
@@ -219,15 +219,15 @@ void acende_tabuleiro()
 
     if (x == 0)
     {
-        output_low(LIN1);
+        output_high(LIN1);
     }
     else if (x == 1)
     {
-        output_low(LIN2);
+        output_high(LIN2);
     }
     else if (x == 2)
     {
-        output_low(LIN3);
+        output_high(LIN3);
     }
 
     if (tabuleiro[x][y] == 1)
