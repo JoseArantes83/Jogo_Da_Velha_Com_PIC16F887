@@ -113,7 +113,7 @@ void main()
                     pontuacaoJ2++;
                     // Atualizar valor do display referente � pontua��o do jogador 2.
                 }
-                else if(ganhador == 3)
+                else if (ganhador == 3)
                 {
                     // DAR UM RETORNO VISUAL PARA O USUÁRIO QUE DEU VELHA
                 }
@@ -203,13 +203,16 @@ void reinicia_tabuleiro()
 
     tabuleiro[0][0] = 0;
     cursorx = cursory = 0;
+
+    pontuacaoJ1 = 0, pontuacaoJ2 = 0;
+    ganhador = 0;
 }
 
 void acende_tabuleiro()
 {
-    output_low(LIN1);
-    output_low(LIN2);
-    output_low(LIN3);
+    output_high(LIN1);
+    output_high(LIN2);
+    output_high(LIN3);
     output_low(RED1);
     output_low(RED2);
     output_low(RED3);
@@ -219,15 +222,15 @@ void acende_tabuleiro()
 
     if (x == 0)
     {
-        output_high(LIN1);
+        output_low(LIN1);
     }
     else if (x == 1)
     {
-        output_high(LIN2);
+        output_low(LIN2);
     }
     else if (x == 2)
     {
-        output_high(LIN3);
+        output_low(LIN3);
     }
 
     if (tabuleiro[x][y] == 1)
@@ -337,7 +340,8 @@ int8 verifica_ganhador(int8 matriz[3][3])
 
         if (contvelha == 9)
             return 3;
-        else{
+        else
+        {
             return 0;
         }
     }
