@@ -113,7 +113,7 @@ void main()
                     pontuacaoJ2++;
                     // Atualizar valor do display referente � pontua��o do jogador 2.
                 }
-                else if(ganhador == 3)
+                else if (ganhador == 3)
                 {
                     // DAR UM RETORNO VISUAL PARA O USUÁRIO QUE DEU VELHA
                 }
@@ -203,7 +203,7 @@ void reinicia_tabuleiro()
 
     tabuleiro[0][0] = 0;
     cursorx = cursory = 0;
-    
+
     pontuacaoJ1 = 0, pontuacaoJ2 = 0;
     ganhador = 0;
 }
@@ -340,7 +340,8 @@ int8 verifica_ganhador(int8 matriz[3][3])
 
         if (contvelha == 9)
             return 3;
-        else{
+        else
+        {
             return 0;
         }
     }
