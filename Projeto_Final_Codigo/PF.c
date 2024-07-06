@@ -38,50 +38,50 @@ void main()
 
     while (TRUE)
     {
-        if (input(B_RESET) == 0)
-        {
-            filtro_reset--;
-            if (filtro_reset == 0 && ja_li_reset == 0)
-            {
-                ja_li_reset = 1;
-                zera_jogo();
-            }
-        }
-        else
-        {
-            ja_li_reset = 0;
-            filtro_reset = 100;
-        }
+//!        if (input(B_RESET) == 0)
+//!        {
+//!            filtro_reset--;
+//!            if (filtro_reset == 0 && ja_li_reset == 0)
+//!            {
+//!                ja_li_reset = 1;
+//!                zera_jogo();
+//!            }
+//!        }
+//!        else
+//!        {
+//!            ja_li_reset = 0;
+//!            filtro_reset = 100;
+//!        }
 
-        if (input(B_MOVE) == 0)
-        {
-            filtro_mov--;
-            if (filtro_mov == 0 && ja_li_mov == 0)
-            {
-                ja_li_mov = 1;
-                move_cursor();
-            }
-        }
-        else
-        {
-            ja_li_mov = 0;
-            filtro_mov = 100;
-        }
+//!        if (input(B_MOVE) == 0)
+//!        {
+//!            filtro_mov--;
+//!            if (filtro_mov == 0 && ja_li_mov == 0)
+//!            {
+//!                ja_li_mov = 1;
+//!                move_cursor();
+//!            }
+//!        }
+//!        else
+//!        {
+//!            ja_li_mov = 0;
+//!            filtro_mov = 100;
+//!        }
 
-        if (input(B_CONFIRM) == 0)
-        {
-            filtro_conf--;
-            if (filtro_conf == 0 && ja_li_conf == 0)
-            {
-                ja_li_conf = 1;
-                confirma_acao();
-            }
-        }
-        else
-        {
-            ja_li_conf = 0;
-            filtro_conf = 100;
-        }
+//!        if (input(B_CONFIRM) == 0)
+//!        {
+//!            filtro_conf--;
+//!            if (filtro_conf == 0 && ja_li_conf == 0)
+//!            {
+//!                ja_li_conf = 1;
+//!                confirma_acao();
+//!            }
+//!        }
+//!        else
+//!        {
+//!            ja_li_conf = 0;
+//!            filtro_conf = 100;
+//!        }
 
         if (fimtempo)
         {
