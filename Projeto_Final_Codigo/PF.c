@@ -33,7 +33,7 @@ void main()
     enable_interrupts(INT_TIMER0);
     enable_interrupts(GLOBAL);
 
-    reinicia_tabuleiro();
+    zera_jogo();
     atualiza_displays();
 
     while (TRUE)
@@ -44,7 +44,7 @@ void main()
             if (filtro_reset == 0 && ja_li_reset == 0)
             {
                 ja_li_reset = 1;
-                reinicia_tabuleiro();
+                zera_jogo();
             }
         }
         else
@@ -204,7 +204,6 @@ void reinicia_tabuleiro()
     tabuleiro[0][0] = 0;
     cursorx = cursory = 0;
 
-    pontuacaoJ1 = 0, pontuacaoJ2 = 0;
     ganhador = 0;
 }
 
