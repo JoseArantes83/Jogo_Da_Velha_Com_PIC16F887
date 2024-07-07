@@ -68,20 +68,20 @@ void main()
             filtro_mov = 100;
         }
 
-//!        if (input(B_CONFIRM) == 0)
-//!        {
-//!            filtro_conf--;
-//!            if (filtro_conf == 0 && ja_li_conf == 0)
-//!            {
-//!                ja_li_conf = 1;
-//!                confirma_acao();
-//!            }
-//!        }
-//!        else
-//!        {
-//!            ja_li_conf = 0;
-//!            filtro_conf = 100;
-//!        }
+        if (input(B_CONFIRM) == 0)
+        {
+            filtro_conf--;
+            if (filtro_conf == 0 && ja_li_conf == 0)
+            {
+                ja_li_conf = 1;
+                confirma_acao();
+            }
+        }
+        else
+        {
+            ja_li_conf = 0;
+            filtro_conf = 100;
+        }
 
         if (fimtempo)
         {
