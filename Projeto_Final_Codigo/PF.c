@@ -34,7 +34,7 @@ void main()
     enable_interrupts(GLOBAL);
 
     zera_jogo();
-    atualiza_displays();
+//!    atualiza_displays();
 
     while (TRUE)
     {
@@ -53,20 +53,20 @@ void main()
 //!            filtro_reset = 100;
 //!        }
 
-//!        if (input(B_MOVE) == 0)
-//!        {
-//!            filtro_mov--;
-//!            if (filtro_mov == 0 && ja_li_mov == 0)
-//!            {
-//!                ja_li_mov = 1;
-//!                move_cursor();
-//!            }
-//!        }
-//!        else
-//!        {
-//!            ja_li_mov = 0;
-//!            filtro_mov = 100;
-//!        }
+        if (input(B_MOVE) == 0)
+        {
+            filtro_mov--;
+            if (filtro_mov == 0 && ja_li_mov == 0)
+            {
+                ja_li_mov = 1;
+                move_cursor();
+            }
+        }
+        else
+        {
+            ja_li_mov = 0;
+            filtro_mov = 100;
+        }
 
 //!        if (input(B_CONFIRM) == 0)
 //!        {
@@ -97,7 +97,7 @@ void main()
                 }
             }
 
-            atualiza_displays();
+//!            atualiza_displays();
 
             ganhador = verifica_ganhador(tabuleiro);
 
@@ -121,7 +121,7 @@ void main()
                 reinicia_tabuleiro();
             }
 
-            atualiza_displays();
+//!            atualiza_displays();
 
             fimtempo = 0;
         }
@@ -352,6 +352,6 @@ void zera_jogo()
 
     fimtempo = 0;
     tempo = 0;
-    i = j = x = y = cursorx = cursory = 0;
-    pontuacaoJ1 = pontuacaoJ2 = ganhador = contvelha = 0;
+    i = j = x = y = 0;
+    pontuacaoJ1 = pontuacaoJ2 = contvelha = 0;
 }
