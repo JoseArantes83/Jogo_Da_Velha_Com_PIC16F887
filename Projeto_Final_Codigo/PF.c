@@ -20,7 +20,7 @@ void TIMER0_isr(void)
 {
     tempo++;
 
-    if (tempo == 100)
+    if (tempo == 20)
     {
         tempo = 0;
         fimtempo = 1;
