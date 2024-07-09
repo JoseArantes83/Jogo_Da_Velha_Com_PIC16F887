@@ -34,24 +34,24 @@ void main()
     enable_interrupts(GLOBAL);
 
     zera_jogo();
-    //! atualiza_displays();
+    atualiza_displays();
 
     while (TRUE)
     {
-        //!        if (input(B_RESET) == 0)
-        //!        {
-        //!            filtro_reset--;
-        //!            if (filtro_reset == 0 && ja_li_reset == 0)
-        //!            {
-        //!                ja_li_reset = 1;
-        //!                zera_jogo();
-        //!            }
-        //!        }
-        //!        else
-        //!        {
-        //!            ja_li_reset = 0;
-        //!            filtro_reset = 100;
-        //!        }
+                if (input(B_RESET) == 0)
+                {
+                    filtro_reset--;
+                    if (filtro_reset == 0 && ja_li_reset == 0)
+                    {
+                        ja_li_reset = 1;
+                        zera_jogo();
+                    }
+                }
+                else
+                {
+                    ja_li_reset = 0;
+                    filtro_reset = 100;
+                }
 
         if (input(B_MOVE) == 0)
         {
@@ -97,7 +97,7 @@ void main()
                 }
             }
 
-            //! atualiza_displays();
+             atualiza_displays();
 
             ganhador = verifica_ganhador(tabuleiro);
 
@@ -106,22 +106,22 @@ void main()
                 if (ganhador == 1)
                 {
                     pontuacaoJ1++;
-                    // Atualizar valor do display referente � pontua��o do jogador 1.
+                    // Atualizar valor do display referente a pontuacao do jogador 1.
                 }
                 else if (ganhador == 2)
                 {
                     pontuacaoJ2++;
-                    // Atualizar valor do display referente � pontua��o do jogador 2.
+                    // Atualizar valor do display referente a pontuacao do jogador 2.
                 }
                 else if (ganhador == 3)
                 {
-                    // DAR UM RETORNO VISUAL PARA O USUÁRIO QUE DEU VELHA
+                    // DAR UM RETORNO VISUAL PARA O USUARIO QUE DEU VELHA
                 }
 
                 reinicia_tabuleiro();
             }
 
-            //! atualiza_displays();
+             atualiza_displays();
 
             fimtempo = 0;
         }
