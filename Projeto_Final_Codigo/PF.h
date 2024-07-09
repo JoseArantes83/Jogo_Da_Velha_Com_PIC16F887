@@ -18,6 +18,7 @@
 #use FIXED_IO(C_outputs = PIN_C7, PIN_C6, PIN_C5, PIN_C4, PIN_C3, PIN_C2, PIN_C1, PIN_C0)
 #use FIXED_IO(D_outputs = PIN_D7, PIN_D6, PIN_D5, PIN_D4, PIN_D3, PIN_D2, PIN_D1, PIN_D0)
 #use FIXED_IO(E_outputs = PIN_E0)
+
 #define B_CONFIRM PIN_A0
 #define B_MOVE PIN_A1
 #define B_RESET PIN_A2
@@ -30,7 +31,6 @@
 #define LIN1 PIN_B7
 #define LIN2 PIN_B6
 #define LIN3 PIN_B5
-// #define GND PIN_E0
 #define A1 PIN_C0
 #define A2 PIN_C1
 #define A3 PIN_C2
